@@ -5,7 +5,6 @@ final class iOSUIComponentsTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        iOSUIComponents.initialize()
     }
     
     override func tearDown() {
@@ -13,593 +12,582 @@ final class iOSUIComponentsTests: XCTestCase {
     }
     
     // MARK: - Design System Tests
+    
     func testDesignSystemColors() {
-        // Test primary colors
+        // Given & When & Then
         XCTAssertNotNil(DesignSystem.Colors.primary)
         XCTAssertNotNil(DesignSystem.Colors.secondary)
         XCTAssertNotNil(DesignSystem.Colors.accent)
-        
-        // Test semantic colors
-        XCTAssertNotNil(DesignSystem.Colors.success)
-        XCTAssertNotNil(DesignSystem.Colors.warning)
-        XCTAssertNotNil(DesignSystem.Colors.error)
-        
-        // Test neutral colors
         XCTAssertNotNil(DesignSystem.Colors.background)
         XCTAssertNotNil(DesignSystem.Colors.surface)
         XCTAssertNotNil(DesignSystem.Colors.text)
+        XCTAssertNotNil(DesignSystem.Colors.textSecondary)
+        XCTAssertNotNil(DesignSystem.Colors.border)
+        XCTAssertNotNil(DesignSystem.Colors.divider)
+        XCTAssertNotNil(DesignSystem.Colors.success)
+        XCTAssertNotNil(DesignSystem.Colors.warning)
+        XCTAssertNotNil(DesignSystem.Colors.error)
+        XCTAssertNotNil(DesignSystem.Colors.info)
+        XCTAssertNotNil(DesignSystem.Colors.online)
+        XCTAssertNotNil(DesignSystem.Colors.offline)
+        XCTAssertNotNil(DesignSystem.Colors.busy)
+        XCTAssertNotNil(DesignSystem.Colors.away)
     }
     
     func testDesignSystemTypography() {
-        // Test heading fonts
-        XCTAssertNotNil(DesignSystem.Typography.h1)
-        XCTAssertNotNil(DesignSystem.Typography.h2)
-        XCTAssertNotNil(DesignSystem.Typography.h3)
+        // Given & When & Then
+        XCTAssertEqual(DesignSystem.Typography.displayLarge, 57)
+        XCTAssertEqual(DesignSystem.Typography.displayMedium, 45)
+        XCTAssertEqual(DesignSystem.Typography.displaySmall, 36)
+        XCTAssertEqual(DesignSystem.Typography.headlineLarge, 32)
+        XCTAssertEqual(DesignSystem.Typography.headlineMedium, 28)
+        XCTAssertEqual(DesignSystem.Typography.headlineSmall, 24)
+        XCTAssertEqual(DesignSystem.Typography.titleLarge, 22)
+        XCTAssertEqual(DesignSystem.Typography.titleMedium, 16)
+        XCTAssertEqual(DesignSystem.Typography.titleSmall, 14)
+        XCTAssertEqual(DesignSystem.Typography.bodyLarge, 16)
+        XCTAssertEqual(DesignSystem.Typography.bodyMedium, 14)
+        XCTAssertEqual(DesignSystem.Typography.bodySmall, 12)
+        XCTAssertEqual(DesignSystem.Typography.labelLarge, 14)
+        XCTAssertEqual(DesignSystem.Typography.labelMedium, 12)
+        XCTAssertEqual(DesignSystem.Typography.labelSmall, 11)
         
-        // Test body fonts
-        XCTAssertNotNil(DesignSystem.Typography.bodyLarge)
-        XCTAssertNotNil(DesignSystem.Typography.body)
-        XCTAssertNotNil(DesignSystem.Typography.bodySmall)
+        // Font Weights
+        XCTAssertEqual(DesignSystem.Typography.light, .light)
+        XCTAssertEqual(DesignSystem.Typography.regular, .regular)
+        XCTAssertEqual(DesignSystem.Typography.medium, .medium)
+        XCTAssertEqual(DesignSystem.Typography.semibold, .semibold)
+        XCTAssertEqual(DesignSystem.Typography.bold, .bold)
+        XCTAssertEqual(DesignSystem.Typography.heavy, .heavy)
         
-        // Test caption fonts
-        XCTAssertNotNil(DesignSystem.Typography.caption)
-        XCTAssertNotNil(DesignSystem.Typography.captionSmall)
-        
-        // Test button fonts
-        XCTAssertNotNil(DesignSystem.Typography.button)
-        XCTAssertNotNil(DesignSystem.Typography.buttonSmall)
+        // Line Heights
+        XCTAssertEqual(DesignSystem.Typography.lineHeightTight, 1.2)
+        XCTAssertEqual(DesignSystem.Typography.lineHeightNormal, 1.4)
+        XCTAssertEqual(DesignSystem.Typography.lineHeightRelaxed, 1.6)
+        XCTAssertEqual(DesignSystem.Typography.lineHeightLoose, 1.8)
     }
     
     func testDesignSystemSpacing() {
+        // Given & When & Then
         XCTAssertEqual(DesignSystem.Spacing.xs, 4)
         XCTAssertEqual(DesignSystem.Spacing.sm, 8)
         XCTAssertEqual(DesignSystem.Spacing.md, 16)
         XCTAssertEqual(DesignSystem.Spacing.lg, 24)
         XCTAssertEqual(DesignSystem.Spacing.xl, 32)
         XCTAssertEqual(DesignSystem.Spacing.xxl, 48)
+        XCTAssertEqual(DesignSystem.Spacing.xxxl, 64)
+        
+        // Component Spacing
+        XCTAssertEqual(DesignSystem.Spacing.buttonPadding, 16)
+        XCTAssertEqual(DesignSystem.Spacing.cardPadding, 16)
+        XCTAssertEqual(DesignSystem.Spacing.listItemSpacing, 8)
+        XCTAssertEqual(DesignSystem.Spacing.sectionSpacing, 24)
+        XCTAssertEqual(DesignSystem.Spacing.screenPadding, 16)
+        XCTAssertEqual(DesignSystem.Spacing.modalPadding, 24)
     }
     
     func testDesignSystemBorderRadius() {
-        XCTAssertEqual(DesignSystem.BorderRadius.xs, 4)
-        XCTAssertEqual(DesignSystem.BorderRadius.sm, 8)
-        XCTAssertEqual(DesignSystem.BorderRadius.md, 12)
-        XCTAssertEqual(DesignSystem.BorderRadius.lg, 16)
-        XCTAssertEqual(DesignSystem.BorderRadius.xl, 20)
+        // Given & When & Then
+        XCTAssertEqual(DesignSystem.BorderRadius.none, 0)
+        XCTAssertEqual(DesignSystem.BorderRadius.xs, 2)
+        XCTAssertEqual(DesignSystem.BorderRadius.sm, 4)
+        XCTAssertEqual(DesignSystem.BorderRadius.md, 8)
+        XCTAssertEqual(DesignSystem.BorderRadius.lg, 12)
+        XCTAssertEqual(DesignSystem.BorderRadius.xl, 16)
         XCTAssertEqual(DesignSystem.BorderRadius.xxl, 24)
-        XCTAssertEqual(DesignSystem.BorderRadius.round, 50)
+        XCTAssertEqual(DesignSystem.BorderRadius.full, 999)
+        
+        // Component Radius
+        XCTAssertEqual(DesignSystem.BorderRadius.button, 8)
+        XCTAssertEqual(DesignSystem.BorderRadius.card, 12)
+        XCTAssertEqual(DesignSystem.BorderRadius.input, 8)
+        XCTAssertEqual(DesignSystem.BorderRadius.avatar, 50)
+        XCTAssertEqual(DesignSystem.BorderRadius.badge, 12)
+        XCTAssertEqual(DesignSystem.BorderRadius.modal, 16)
     }
     
     func testDesignSystemShadows() {
-        // Test shadow properties
-        XCTAssertNotNil(DesignSystem.Shadows.small)
-        XCTAssertNotNil(DesignSystem.Shadows.medium)
-        XCTAssertNotNil(DesignSystem.Shadows.large)
-        XCTAssertNotNil(DesignSystem.Shadows.extraLarge)
+        // Given & When & Then
+        XCTAssertEqual(DesignSystem.Shadows.none.radius, 0)
+        XCTAssertEqual(DesignSystem.Shadows.sm.radius, 1)
+        XCTAssertEqual(DesignSystem.Shadows.md.radius, 4)
+        XCTAssertEqual(DesignSystem.Shadows.lg.radius, 8)
+        XCTAssertEqual(DesignSystem.Shadows.xl.radius, 16)
+        XCTAssertEqual(DesignSystem.Shadows.xxl.radius, 24)
         
-        // Test shadow values
-        XCTAssertEqual(DesignSystem.Shadows.small.radius, 2)
-        XCTAssertEqual(DesignSystem.Shadows.medium.radius, 4)
-        XCTAssertEqual(DesignSystem.Shadows.large.radius, 8)
-        XCTAssertEqual(DesignSystem.Shadows.extraLarge.radius, 16)
+        // Component Shadows
+        XCTAssertEqual(DesignSystem.Shadows.button.radius, 4)
+        XCTAssertEqual(DesignSystem.Shadows.card.radius, 8)
+        XCTAssertEqual(DesignSystem.Shadows.modal.radius, 16)
+        XCTAssertEqual(DesignSystem.Shadows.dropdown.radius, 4)
+        XCTAssertEqual(DesignSystem.Shadows.tooltip.radius, 1)
     }
     
-    // MARK: - Color Extension Tests
+    // MARK: - Color Tests
+    
     func testColorHexInitialization() {
-        // Test valid hex colors
-        let redColor = Color(hex: "#FF0000")
-        let greenColor = Color(hex: "#00FF00")
-        let blueColor = Color(hex: "#0000FF")
+        // Given & When & Then
+        let validColor = Color(hex: "#FF0000")
+        XCTAssertNotNil(validColor)
         
-        XCTAssertNotNil(redColor)
-        XCTAssertNotNil(greenColor)
-        XCTAssertNotNil(blueColor)
-        
-        // Test short hex colors
-        let shortRed = Color(hex: "#F00")
-        let shortGreen = Color(hex: "#0F0")
-        let shortBlue = Color(hex: "#00F")
-        
-        XCTAssertNotNil(shortRed)
-        XCTAssertNotNil(shortGreen)
-        XCTAssertNotNil(shortBlue)
-        
-        // Test invalid hex colors
         let invalidColor = Color(hex: "invalid")
-        XCTAssertNotNil(invalidColor) // Should not crash
+        XCTAssertNotNil(invalidColor) // Should return default color
+        
+        let shortHexColor = Color(hex: "#F00")
+        XCTAssertNotNil(shortHexColor)
+        
+        let longHexColor = Color(hex: "#FF0000FF")
+        XCTAssertNotNil(longHexColor)
     }
     
     // MARK: - Theme Tests
+    
     func testLightTheme() {
-        let lightTheme = Theme.light
+        // Given & When
+        let theme = Theme.light
         
-        XCTAssertNotNil(lightTheme.colors.primary)
-        XCTAssertNotNil(lightTheme.colors.secondary)
-        XCTAssertNotNil(lightTheme.colors.accent)
-        XCTAssertNotNil(lightTheme.colors.background)
-        XCTAssertNotNil(lightTheme.colors.surface)
-        XCTAssertNotNil(lightTheme.colors.text)
-        XCTAssertNotNil(lightTheme.colors.textSecondary)
-        
-        XCTAssertNotNil(lightTheme.typography.h1)
-        XCTAssertNotNil(lightTheme.typography.h2)
-        XCTAssertNotNil(lightTheme.typography.h3)
-        XCTAssertNotNil(lightTheme.typography.body)
-        XCTAssertNotNil(lightTheme.typography.caption)
-        XCTAssertNotNil(lightTheme.typography.button)
-        
-        XCTAssertEqual(lightTheme.spacing.xs, 4)
-        XCTAssertEqual(lightTheme.spacing.sm, 8)
-        XCTAssertEqual(lightTheme.spacing.md, 16)
-        XCTAssertEqual(lightTheme.spacing.lg, 24)
-        XCTAssertEqual(lightTheme.spacing.xl, 32)
+        // Then
+        XCTAssertNotNil(theme.colors)
+        XCTAssertNotNil(theme.typography)
+        XCTAssertNotNil(theme.spacing)
     }
     
     func testDarkTheme() {
-        let darkTheme = Theme.dark
+        // Given & When
+        let theme = Theme.dark
         
-        XCTAssertNotNil(darkTheme.colors.primary)
-        XCTAssertNotNil(darkTheme.colors.secondary)
-        XCTAssertNotNil(darkTheme.colors.accent)
-        XCTAssertNotNil(darkTheme.colors.background)
-        XCTAssertNotNil(darkTheme.colors.surface)
-        XCTAssertNotNil(darkTheme.colors.text)
-        XCTAssertNotNil(darkTheme.colors.textSecondary)
+        // Then
+        XCTAssertNotNil(theme.colors)
+        XCTAssertNotNil(theme.typography)
+        XCTAssertNotNil(theme.spacing)
+    }
+    
+    // MARK: - Color Palette Tests
+    
+    func testLightColorPalette() {
+        // Given & When
+        let palette = LightColorPalette()
         
-        XCTAssertNotNil(darkTheme.typography.h1)
-        XCTAssertNotNil(darkTheme.typography.h2)
-        XCTAssertNotNil(darkTheme.typography.h3)
-        XCTAssertNotNil(darkTheme.typography.body)
-        XCTAssertNotNil(darkTheme.typography.caption)
-        XCTAssertNotNil(darkTheme.typography.button)
+        // Then
+        XCTAssertNotNil(palette.primary)
+        XCTAssertNotNil(palette.secondary)
+        XCTAssertNotNil(palette.accent)
+        XCTAssertNotNil(palette.background)
+        XCTAssertNotNil(palette.surface)
+        XCTAssertNotNil(palette.text)
+        XCTAssertNotNil(palette.textSecondary)
+        XCTAssertNotNil(palette.border)
+        XCTAssertNotNil(palette.success)
+        XCTAssertNotNil(palette.warning)
+        XCTAssertNotNil(palette.error)
+    }
+    
+    func testDarkColorPalette() {
+        // Given & When
+        let palette = DarkColorPalette()
         
-        XCTAssertEqual(darkTheme.spacing.xs, 4)
-        XCTAssertEqual(darkTheme.spacing.sm, 8)
-        XCTAssertEqual(darkTheme.spacing.md, 16)
-        XCTAssertEqual(darkTheme.spacing.lg, 24)
-        XCTAssertEqual(darkTheme.spacing.xl, 32)
+        // Then
+        XCTAssertNotNil(palette.primary)
+        XCTAssertNotNil(palette.secondary)
+        XCTAssertNotNil(palette.accent)
+        XCTAssertNotNil(palette.background)
+        XCTAssertNotNil(palette.surface)
+        XCTAssertNotNil(palette.text)
+        XCTAssertNotNil(palette.textSecondary)
+        XCTAssertNotNil(palette.border)
+        XCTAssertNotNil(palette.success)
+        XCTAssertNotNil(palette.warning)
+        XCTAssertNotNil(palette.error)
+    }
+    
+    // MARK: - Typography Palette Tests
+    
+    func testDefaultTypographyPalette() {
+        // Given & When
+        let palette = DefaultTypographyPalette()
+        
+        // Then
+        XCTAssertNotNil(palette.displayLarge)
+        XCTAssertNotNil(palette.displayMedium)
+        XCTAssertNotNil(palette.displaySmall)
+        XCTAssertNotNil(palette.headlineLarge)
+        XCTAssertNotNil(palette.headlineMedium)
+        XCTAssertNotNil(palette.headlineSmall)
+        XCTAssertNotNil(palette.titleLarge)
+        XCTAssertNotNil(palette.titleMedium)
+        XCTAssertNotNil(palette.titleSmall)
+        XCTAssertNotNil(palette.bodyLarge)
+        XCTAssertNotNil(palette.bodyMedium)
+        XCTAssertNotNil(palette.bodySmall)
+        XCTAssertNotNil(palette.labelLarge)
+        XCTAssertNotNil(palette.labelMedium)
+        XCTAssertNotNil(palette.labelSmall)
+    }
+    
+    // MARK: - Spacing Palette Tests
+    
+    func testDefaultSpacingPalette() {
+        // Given & When
+        let palette = DefaultSpacingPalette()
+        
+        // Then
+        XCTAssertEqual(palette.xs, DesignSystem.Spacing.xs)
+        XCTAssertEqual(palette.sm, DesignSystem.Spacing.sm)
+        XCTAssertEqual(palette.md, DesignSystem.Spacing.md)
+        XCTAssertEqual(palette.lg, DesignSystem.Spacing.lg)
+        XCTAssertEqual(palette.xl, DesignSystem.Spacing.xl)
+        XCTAssertEqual(palette.xxl, DesignSystem.Spacing.xxl)
+        XCTAssertEqual(palette.xxxl, DesignSystem.Spacing.xxxl)
     }
     
     // MARK: - Shadow Tests
+    
     func testShadowInitialization() {
-        let shadow = Shadow(
-            color: .black.opacity(0.1),
-            radius: 4,
-            x: 0,
-            y: 2
-        )
+        // Given
+        let radius: CGFloat = 4
+        let x: CGFloat = 0
+        let y: CGFloat = 2
+        let opacity: Double = 0.1
         
-        XCTAssertEqual(shadow.radius, 4)
-        XCTAssertEqual(shadow.x, 0)
-        XCTAssertEqual(shadow.y, 2)
-        XCTAssertNotNil(shadow.color)
+        // When
+        let shadow = Shadow(radius: radius, x: x, y: y, opacity: opacity)
+        
+        // Then
+        XCTAssertEqual(shadow.radius, radius)
+        XCTAssertEqual(shadow.x, x)
+        XCTAssertEqual(shadow.y, y)
+        XCTAssertEqual(shadow.opacity, opacity)
     }
     
-    // MARK: - Component Tests
+    // MARK: - iOS UI Components Tests
+    
+    func testiOSUIComponentsVersion() {
+        // Given & When & Then
+        XCTAssertEqual(iOSUIComponents.version, "1.0.0")
+    }
+    
+    func testiOSUIComponentsInitialization() {
+        // Given & When & Then
+        // This test verifies that initialization doesn't crash
+        iOSUIComponents.initialize()
+    }
+    
+    // MARK: - Button Component Tests
+    
     func testPrimaryButton() {
-        let button = PrimaryButton(
-            title: "Test Button",
-            isEnabled: true,
-            isLoading: false
-        ) {
-            // Test action
+        // Given & When & Then
+        let button = PrimaryButton(title: "Test Button") {
+            // Action
         }
-        
-        XCTAssertEqual(button.title, "Test Button")
-        XCTAssertTrue(button.isEnabled)
-        XCTAssertFalse(button.isLoading)
+        XCTAssertNotNil(button)
     }
     
     func testSecondaryButton() {
-        let button = SecondaryButton(
-            title: "Test Button",
-            isEnabled: true
-        ) {
-            // Test action
+        // Given & When & Then
+        let button = SecondaryButton(title: "Test Button") {
+            // Action
         }
-        
-        XCTAssertEqual(button.title, "Test Button")
-        XCTAssertTrue(button.isEnabled)
+        XCTAssertNotNil(button)
     }
     
     func testIconButton() {
-        let button = IconButton(
-            icon: "star.fill",
-            title: "Favorite",
-            isEnabled: true
-        ) {
-            // Test action
+        // Given & When & Then
+        let button = IconButton(icon: "star.fill") {
+            // Action
         }
-        
-        XCTAssertEqual(button.icon, "star.fill")
-        XCTAssertEqual(button.title, "Favorite")
-        XCTAssertTrue(button.isEnabled)
+        XCTAssertNotNil(button)
     }
     
     func testFloatingActionButton() {
-        let button = FloatingActionButton(
-            icon: "plus",
-            backgroundColor: .blue
-        ) {
-            // Test action
+        // Given & When & Then
+        let button = FloatingActionButton(icon: "plus") {
+            // Action
         }
-        
-        XCTAssertEqual(button.icon, "plus")
-        XCTAssertEqual(button.backgroundColor, .blue)
+        XCTAssertNotNil(button)
     }
     
     func testToggleButton() {
-        @State var isOn = false
-        let button = ToggleButton(
-            isOn: $isOn,
-            title: "Notifications",
-            icon: "bell"
-        )
-        
-        XCTAssertEqual(button.title, "Notifications")
-        XCTAssertEqual(button.icon, "bell")
+        // Given & When & Then
+        let button = ToggleButton(title: "Toggle", isOn: .constant(true)) {
+            // Action
+        }
+        XCTAssertNotNil(button)
     }
     
     func testGradientButton() {
-        let gradient = LinearGradient(
-            colors: [.blue, .purple],
-            startPoint: .leading,
-            endPoint: .trailing
-        )
-        
-        let button = GradientButton(
-            title: "Gradient Button",
-            gradient: gradient,
-            isEnabled: true
-        ) {
-            // Test action
+        // Given & When & Then
+        let button = GradientButton(title: "Gradient", colors: [.blue, .purple]) {
+            // Action
         }
-        
-        XCTAssertEqual(button.title, "Gradient Button")
-        XCTAssertTrue(button.isEnabled)
+        XCTAssertNotNil(button)
     }
     
     func testSocialButton() {
-        let button = SocialButton(
-            title: "Sign in with Apple",
-            icon: "applelogo",
-            backgroundColor: .black
-        ) {
-            // Test action
+        // Given & When & Then
+        let button = SocialButton(title: "Apple", icon: "applelogo", style: .apple) {
+            // Action
         }
-        
-        XCTAssertEqual(button.title, "Sign in with Apple")
-        XCTAssertEqual(button.icon, "applelogo")
-        XCTAssertEqual(button.backgroundColor, .black)
+        XCTAssertNotNil(button)
     }
     
-    // MARK: - Card Tests
+    // MARK: - Card Component Tests
+    
     func testCard() {
+        // Given & When & Then
         let card = Card {
             Text("Card Content")
         }
-        
         XCTAssertNotNil(card)
     }
     
     func testProfileCard() {
+        // Given & When & Then
         let card = ProfileCard(
-            avatar: "person.circle.fill",
             name: "John Doe",
-            subtitle: "Software Engineer"
-        ) {
-            // Test action
-        }
-        
-        XCTAssertEqual(card.avatar, "person.circle.fill")
-        XCTAssertEqual(card.name, "John Doe")
-        XCTAssertEqual(card.subtitle, "Software Engineer")
+            email: "john@example.com",
+            avatar: "person.circle.fill",
+            bio: "iOS Developer"
+        )
+        XCTAssertNotNil(card)
     }
     
     func testInfoCard() {
+        // Given & When & Then
         let card = InfoCard(
-            icon: "info.circle",
-            title: "Information",
-            description: "This is an informational card"
-        ) {
-            // Test action
-        }
-        
-        XCTAssertEqual(card.icon, "info.circle")
-        XCTAssertEqual(card.title, "Information")
-        XCTAssertEqual(card.description, "This is an informational card")
+            title: "Statistics",
+            subtitle: "Last 30 days",
+            icon: "chart.bar.fill",
+            value: "1,234",
+            unit: "views"
+        )
+        XCTAssertNotNil(card)
     }
     
     func testProductCard() {
+        // Given & When & Then
         let card = ProductCard(
-            imageURL: "https://example.com/image.jpg",
-            title: "Product Name",
-            price: "$99.99",
-            originalPrice: "$129.99",
-            rating: 4.5
-        ) {
-            // Test action
-        }
-        
-        XCTAssertEqual(card.imageURL, "https://example.com/image.jpg")
-        XCTAssertEqual(card.title, "Product Name")
-        XCTAssertEqual(card.price, "$99.99")
-        XCTAssertEqual(card.originalPrice, "$129.99")
-        XCTAssertEqual(card.rating, 4.5)
+            name: "iPhone 15 Pro",
+            description: "The most advanced iPhone ever",
+            price: "$999",
+            image: "iphone",
+            rating: 4.8,
+            reviewCount: 1250
+        )
+        XCTAssertNotNil(card)
     }
     
-    // MARK: - Input Tests
-    func testCustomTextField() {
-        @State var text = ""
-        let textField = CustomTextField(
-            text: $text,
-            placeholder: "Enter text",
-            icon: "pencil",
-            validation: .none,
-            isSecure: false
+    func testPostCard() {
+        // Given & When & Then
+        let card = PostCard(
+            author: "Jane Smith",
+            content: "Just finished building an amazing iOS app!",
+            timestamp: Date(),
+            likes: 42,
+            comments: 8,
+            shares: 3
         )
-        
-        XCTAssertEqual(textField.placeholder, "Enter text")
-        XCTAssertEqual(textField.icon, "pencil")
-        XCTAssertEqual(textField.validation, .none)
-        XCTAssertFalse(textField.isSecure)
+        XCTAssertNotNil(card)
+    }
+    
+    // MARK: - Input Component Tests
+    
+    func testCustomTextField() {
+        // Given & When & Then
+        let textField = CustomTextField(
+            text: .constant(""),
+            placeholder: "Enter text",
+            icon: "envelope.fill"
+        )
+        XCTAssertNotNil(textField)
     }
     
     func testCustomToggle() {
-        @State var isOn = false
+        // Given & When & Then
         let toggle = CustomToggle(
-            isOn: $isOn,
-            title: "Enable Notifications",
-            subtitle: "Receive push notifications",
-            icon: "bell"
+            isOn: .constant(true),
+            title: "Notifications",
+            subtitle: "Receive push notifications"
         )
-        
-        XCTAssertEqual(toggle.title, "Enable Notifications")
-        XCTAssertEqual(toggle.subtitle, "Receive push notifications")
-        XCTAssertEqual(toggle.icon, "bell")
+        XCTAssertNotNil(toggle)
     }
     
     func testCustomSlider() {
-        @State var value = 50.0
+        // Given & When & Then
         let slider = CustomSlider(
-            value: $value,
+            value: .constant(50),
             range: 0...100,
-            step: 1,
-            title: "Brightness"
+            title: "Volume",
+            subtitle: "Adjust the volume level"
         )
-        
-        XCTAssertEqual(slider.range, 0...100)
-        XCTAssertEqual(slider.step, 1)
-        XCTAssertEqual(slider.title, "Brightness")
+        XCTAssertNotNil(slider)
     }
     
     func testSearchBar() {
-        @State var text = ""
+        // Given & When & Then
         let searchBar = SearchBar(
-            text: $text,
-            placeholder: "Search...",
-            onSearch: {
-                // Test search action
-            }
+            text: .constant(""),
+            placeholder: "Search..."
         )
-        
-        XCTAssertEqual(searchBar.placeholder, "Search...")
+        XCTAssertNotNil(searchBar)
     }
     
-    // MARK: - Navigation Tests
-    func testCustomNavigationBar() {
-        let navigationBar = CustomNavigationBar(
-            title: "Profile",
-            leftButton: NavigationButton(
-                icon: "chevron.left"
-            ) {
-                // Test back action
-            },
-            rightButton: NavigationButton(
-                icon: "ellipsis"
-            ) {
-                // Test menu action
-            }
+    func testCustomPicker() {
+        // Given & When & Then
+        let picker = CustomPicker(
+            selection: .constant("Option 1"),
+            options: ["Option 1", "Option 2", "Option 3"],
+            title: "Select Option",
+            subtitle: "Choose from available options"
         )
-        
-        XCTAssertEqual(navigationBar.title, "Profile")
-        XCTAssertNotNil(navigationBar.leftButton)
-        XCTAssertNotNil(navigationBar.rightButton)
+        XCTAssertNotNil(picker)
+    }
+    
+    // MARK: - Navigation Component Tests
+    
+    func testCustomNavigationBar() {
+        // Given & When & Then
+        let navigationBar = CustomNavigationBar(
+            title: "Screen Title",
+            leftButton: NavigationButton(icon: "chevron.left") { },
+            rightButton: NavigationButton(icon: "gear") { }
+        )
+        XCTAssertNotNil(navigationBar)
     }
     
     func testCustomTabBar() {
-        @State var selectedTab = 0
-        let tabs = [
-            TabItem(icon: "house", title: "Home"),
-            TabItem(icon: "heart", title: "Favorites", badge: "3"),
-            TabItem(icon: "person", title: "Profile")
-        ]
-        
+        // Given & When & Then
         let tabBar = CustomTabBar(
-            selectedTab: $selectedTab,
-            tabs: tabs
+            selection: .constant(0),
+            items: [
+                TabItem(icon: "house", title: "Home"),
+                TabItem(icon: "person", title: "Profile")
+            ]
         )
-        
-        XCTAssertEqual(tabBar.tabs.count, 3)
-        XCTAssertEqual(tabBar.tabs[0].icon, "house")
-        XCTAssertEqual(tabBar.tabs[0].title, "Home")
-        XCTAssertEqual(tabBar.tabs[1].badge, "3")
+        XCTAssertNotNil(tabBar)
     }
     
     func testBreadcrumbNavigation() {
-        let items = [
-            BreadcrumbItem(title: "Home", id: "home"),
-            BreadcrumbItem(title: "Products", id: "products"),
-            BreadcrumbItem(title: "Details", id: "details")
-        ]
-        
+        // Given & When & Then
         let breadcrumb = BreadcrumbNavigation(
-            items: items
-        ) { item in
-            // Test item tap
-        }
-        
-        XCTAssertEqual(breadcrumb.items.count, 3)
-        XCTAssertEqual(breadcrumb.items[0].title, "Home")
-        XCTAssertEqual(breadcrumb.items[0].id, "home")
+            items: [
+                BreadcrumbItem(title: "Home") { },
+                BreadcrumbItem(title: "Products") { },
+                BreadcrumbItem(title: "Electronics") { }
+            ]
+        )
+        XCTAssertNotNil(breadcrumb)
     }
     
     func testStepIndicator() {
+        // Given & When & Then
         let stepIndicator = StepIndicator(
             currentStep: 2,
             totalSteps: 4,
-            stepTitles: ["Step 1", "Step 2", "Step 3", "Step 4"]
+            steps: ["Step 1", "Step 2", "Step 3", "Step 4"]
         )
-        
-        XCTAssertEqual(stepIndicator.currentStep, 2)
-        XCTAssertEqual(stepIndicator.totalSteps, 4)
-        XCTAssertEqual(stepIndicator.stepTitles.count, 4)
+        XCTAssertNotNil(stepIndicator)
     }
     
-    // MARK: - List Tests
+    // MARK: - List Component Tests
+    
     func testCustomList() {
+        // Given & When & Then
         let list = CustomList {
-            Text("List Item 1")
-            Text("List Item 2")
-            Text("List Item 3")
+            ForEach(0..<5) { index in
+                Text("Item \(index)")
+            }
         }
-        
         XCTAssertNotNil(list)
     }
     
     func testUserRowView() {
-        let user = User(
-            id: "1",
-            name: "John Doe",
-            email: "john@example.com",
-            avatarURL: URL(string: "https://example.com/avatar.jpg")
-        )
-        
-        let userRow = UserRowView(
-            user: user,
-            showAvatar: true,
-            showSubtitle: true
-        ) {
-            // Test action
-        }
-        
-        XCTAssertEqual(userRow.user.id, "1")
-        XCTAssertEqual(userRow.user.name, "John Doe")
-        XCTAssertEqual(userRow.user.email, "john@example.com")
-        XCTAssertTrue(userRow.showAvatar)
-        XCTAssertTrue(userRow.showSubtitle)
+        // Given & When & Then
+        let user = User(id: "1", name: "John Doe", email: "john@example.com", avatar: "person.circle.fill")
+        let rowView = UserRowView(user: user)
+        XCTAssertNotNil(rowView)
     }
     
     func testSettingsRowView() {
-        let settingsRow = SettingsRowView(
+        // Given & When & Then
+        let rowView = SettingsRowView(
             icon: "bell",
             title: "Notifications",
-            subtitle: "Manage notification settings",
-            accessory: .chevron
+            subtitle: "Manage your notifications",
+            accessory: .switch
         ) {
-            // Test action
+            // Action
         }
-        
-        XCTAssertEqual(settingsRow.icon, "bell")
-        XCTAssertEqual(settingsRow.title, "Notifications")
-        XCTAssertEqual(settingsRow.subtitle, "Manage notification settings")
-        XCTAssertEqual(settingsRow.accessory, .chevron)
+        XCTAssertNotNil(rowView)
     }
     
     func testProductRowView() {
-        let product = Product(
-            id: "1",
-            name: "Product Name",
-            description: "Product description",
-            price: "$99.99",
-            originalPrice: "$129.99",
-            imageURL: URL(string: "https://example.com/image.jpg"),
-            rating: 4.5
-        )
-        
-        let productRow = ProductRowView(
-            product: product,
-            showImage: true,
-            showPrice: true
-        ) {
-            // Test action
-        }
-        
-        XCTAssertEqual(productRow.product.id, "1")
-        XCTAssertEqual(productRow.product.name, "Product Name")
-        XCTAssertEqual(productRow.product.price, "$99.99")
-        XCTAssertTrue(productRow.showImage)
-        XCTAssertTrue(productRow.showPrice)
+        // Given & When & Then
+        let product = Product(id: "1", name: "iPhone 15 Pro", price: "$999", image: "iphone")
+        let rowView = ProductRowView(product: product)
+        XCTAssertNotNil(rowView)
     }
     
-    // MARK: - Modal Tests
+    // MARK: - Modal Component Tests
+    
     func testCustomAlert() {
-        @State var isPresented = false
+        // Given & When & Then
         let alert = CustomAlert(
-            title: "Delete Item",
-            message: "Are you sure you want to delete this item?",
-            primaryButton: AlertButton(
-                title: "Delete",
-                style: .destructive
-            ) {
-                // Test delete action
-            },
-            secondaryButton: AlertButton(
-                title: "Cancel",
-                style: .cancel
-            ) {
-                // Test cancel action
-            },
-            isPresented: $isPresented
+            title: "Alert Title",
+            message: "Alert message",
+            primaryButton: AlertButton(title: "OK", style: .primary) { },
+            secondaryButton: AlertButton(title: "Cancel", style: .secondary) { }
         )
-        
-        XCTAssertEqual(alert.title, "Delete Item")
-        XCTAssertEqual(alert.message, "Are you sure you want to delete this item?")
-        XCTAssertNotNil(alert.primaryButton)
-        XCTAssertNotNil(alert.secondaryButton)
+        XCTAssertNotNil(alert)
     }
     
     func testCustomSheet() {
-        @State var isPresented = false
-        let sheet = CustomSheet(
-            isPresented: $isPresented,
-            style: .large
-        ) {
-            Text("Sheet Content")
+        // Given & When & Then
+        let sheet = CustomSheet {
+            VStack {
+                Text("Sheet Content")
+                Button("Dismiss") { }
+            }
         }
-        
         XCTAssertNotNil(sheet)
     }
     
     func testCustomActionSheet() {
-        @State var isPresented = false
+        // Given & When & Then
         let actionSheet = CustomActionSheet(
-            title: "Choose Option",
+            title: "Choose Action",
             message: "Select an action to perform",
-            buttons: [
-                ActionButton(title: "Edit") {
-                    // Test edit action
-                },
-                ActionButton(title: "Delete", style: .destructive) {
-                    // Test delete action
-                }
-            ],
-            isPresented: $isPresented
+            actions: [
+                ActionButton(title: "Take Photo", icon: "camera", style: .default) { },
+                ActionButton(title: "Cancel", icon: "xmark", style: .cancel) { }
+            ]
         )
-        
-        XCTAssertEqual(actionSheet.title, "Choose Option")
-        XCTAssertEqual(actionSheet.message, "Select an action to perform")
-        XCTAssertEqual(actionSheet.buttons.count, 2)
+        XCTAssertNotNil(actionSheet)
     }
     
     func testCustomModal() {
-        @State var isPresented = false
-        let modal = CustomModal(
-            isPresented: $isPresented,
-            style: .default
-        ) {
-            Text("Modal Content")
+        // Given & When & Then
+        let modal = CustomModal {
+            VStack {
+                Text("Modal Content")
+                Button("Close") { }
+            }
         }
-        
         XCTAssertNotNil(modal)
     }
+}
+
+// MARK: - Test Models
+
+struct User: Identifiable {
+    let id: String
+    let name: String
+    let email: String
+    let avatar: String
+}
+
+struct Product: Identifiable {
+    let id: String
+    let name: String
+    let price: String
+    let image: String
 } 

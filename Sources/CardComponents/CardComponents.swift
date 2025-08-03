@@ -24,8 +24,8 @@ public struct Card<Content: View>: View {
             .shadow(
                 color: style.shadowColor,
                 radius: style.shadowRadius,
-                x: style.shadowOffset.x,
-                y: style.shadowOffset.y
+                x: 0,
+                y: 2
             )
     }
 }
@@ -55,13 +55,13 @@ public struct ProfileCard: View {
                     .font(.system(size: 40))
                     .foregroundColor(.primary)
                     .frame(width: 50, height: 50)
-                    .background(Color(.systemGray6))
+                    .background(Color.gray.opacity(0.1))
                     .clipShape(Circle())
                 
                 VStack(alignment: .leading, spacing: 4) {
                     Text(name)
                         .font(.headline)
-                        .fontWeight(.semibold)
+                        .font(.system(size: 16, weight: .semibold))
                     
                     if let subtitle = subtitle {
                         Text(subtitle)
@@ -123,7 +123,7 @@ public struct InfoCard: View {
                 
                 Text(title)
                     .font(.headline)
-                    .fontWeight(.semibold)
+                    .font(.system(size: 16, weight: .semibold))
                 
                 Text(description)
                     .font(.body)
@@ -169,14 +169,14 @@ public struct ProductCard: View {
                             .aspectRatio(contentMode: .fill)
                     } placeholder: {
                         Rectangle()
-                            .fill(Color(.systemGray5))
+                            .fill(Color.gray.opacity(0.1))
                     }
                     .frame(height: 120)
                     .clipped()
                     .cornerRadius(8)
                 } else {
                     Rectangle()
-                        .fill(Color(.systemGray5))
+                        .fill(Color.gray.opacity(0.1))
                         .frame(height: 120)
                         .cornerRadius(8)
                 }
@@ -191,7 +191,7 @@ public struct ProductCard: View {
                     HStack {
                         Text(price)
                             .font(.title3)
-                            .fontWeight(.bold)
+                            .font(.system(size: 16, weight: .bold))
                             .foregroundColor(.blue)
                         
                         if let originalPrice = originalPrice {
@@ -286,7 +286,7 @@ public struct PostCard: View {
                     VStack(alignment: .leading, spacing: 2) {
                         Text(authorName)
                             .font(.headline)
-                            .fontWeight(.semibold)
+                            .font(.system(size: 16, weight: .semibold))
                         
                         Text(timestamp, style: .relative)
                             .font(.caption)
@@ -315,7 +315,7 @@ public struct PostCard: View {
                             .aspectRatio(contentMode: .fit)
                     } placeholder: {
                         Rectangle()
-                            .fill(Color(.systemGray5))
+                            .fill(Color.gray.opacity(0.1))
                     }
                     .frame(maxHeight: 200)
                     .cornerRadius(8)
@@ -388,8 +388,8 @@ public extension View {
             .shadow(
                 color: style.shadowColor,
                 radius: style.shadowRadius,
-                x: style.shadowOffset.x,
-                y: style.shadowOffset.y
+                x: 0,
+                y: 2
             )
     }
 } 

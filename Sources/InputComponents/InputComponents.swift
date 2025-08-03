@@ -5,23 +5,17 @@ public struct CustomTextField: View {
     public let placeholder: String
     @Binding public var text: String
     public let validation: ValidationType?
-    public let keyboardType: UIKeyboardType
-    public let textContentType: UITextContentType?
     @State private var isEditing = false
     @State private var showPassword = false
     
     public init(
         placeholder: String,
         text: Binding<String>,
-        validation: ValidationType? = nil,
-        keyboardType: UIKeyboardType = .default,
-        textContentType: UITextContentType? = nil
+        validation: ValidationType? = nil
     ) {
         self.placeholder = placeholder
         self._text = text
         self.validation = validation
-        self.keyboardType = keyboardType
-        self.textContentType = textContentType
     }
     
     public var body: some View {
@@ -29,11 +23,9 @@ public struct CustomTextField: View {
             HStack {
                 TextField(placeholder, text: $text)
                     .font(.system(size: 16, weight: .regular))
-                    .keyboardType(keyboardType)
-                    .textContentType(textContentType)
                     .padding(.horizontal, 16)
                     .padding(.vertical, 12)
-                    .background(Color(.systemGray6))
+                    .background(Color.gray.opacity(0.1))
                     .cornerRadius(8)
                     .overlay(
                         RoundedRectangle(cornerRadius: 8)
@@ -86,9 +78,20 @@ public struct CustomTextField: View {
     }
 }
 
-public enum ValidationType {
+public enum ValidationType: Equatable {
     case email, phone, password, url
     case custom((String) -> Bool)
+    
+    public static func == (lhs: ValidationType, rhs: ValidationType) -> Bool {
+        switch (lhs, rhs) {
+        case (.email, .email), (.phone, .phone), (.password, .password), (.url, .url):
+            return true
+        case (.custom, .custom):
+            return false // Custom validators are not comparable
+        default:
+            return false
+        }
+    }
 }
 
 public struct ValidationMessage: View {
@@ -174,7 +177,7 @@ public struct CustomToggle: View {
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 12)
-        .background(Color(.systemGray6))
+        .background(Color.gray.opacity(0.1))
         .cornerRadius(8)
     }
 }
@@ -230,19 +233,19 @@ public struct CustomSlider: View {
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 12)
-        .background(Color(.systemGray6))
+        .background(Color.gray.opacity(0.1))
         .cornerRadius(8)
     }
 }
 
 public struct CustomPicker<SelectionValue: Hashable>: View {
-    @Binding public var selection: SelectionValue
+    @Binding public var selection: SelectionValue?
     public let options: [SelectionValue]
     public let title: String?
     public let placeholder: String?
     
     public init(
-        selection: Binding<SelectionValue>,
+        selection: Binding<SelectionValue?>,
         options: [SelectionValue],
         title: String? = nil,
         placeholder: String? = nil
@@ -269,7 +272,7 @@ public struct CustomPicker<SelectionValue: Hashable>: View {
                 }
             } label: {
                 HStack {
-                    Text(selection == nil ? (placeholder ?? "Select option") : String(describing: selection))
+                    Text(selection == nil ? (placeholder ?? "Select option") : String(describing: selection!))
                         .font(.system(size: 16, weight: .regular))
                         .foregroundColor(selection == nil ? .secondary : .primary)
                     
@@ -281,7 +284,7 @@ public struct CustomPicker<SelectionValue: Hashable>: View {
                 }
                 .padding(.horizontal, 16)
                 .padding(.vertical, 12)
-                .background(Color(.systemGray6))
+                .background(Color.gray.opacity(0.1))
                 .cornerRadius(8)
             }
         }
@@ -291,13 +294,17 @@ public struct CustomPicker<SelectionValue: Hashable>: View {
 public struct CustomDatePicker: View {
     @Binding public var date: Date
     public let title: String?
-    public let mode: UIDatePicker.Mode
+    public let mode: DatePickerMode
     public let range: ClosedRange<Date>?
+    
+    public enum DatePickerMode {
+        case date, time, dateAndTime
+    }
     
     public init(
         date: Binding<Date>,
         title: String? = nil,
-        mode: UIDatePicker.Mode = .date,
+        mode: DatePickerMode = .date,
         range: ClosedRange<Date>? = nil
     ) {
         self._date = date
@@ -324,7 +331,7 @@ public struct CustomDatePicker: View {
             .labelsHidden()
             .padding(.horizontal, 16)
             .padding(.vertical, 12)
-            .background(Color(.systemGray6))
+            .background(Color.gray.opacity(0.1))
             .cornerRadius(8)
         }
     }
@@ -334,43 +341,68 @@ public struct CustomSearchBar: View {
     @Binding public var text: String
     public let placeholder: String
     public let onSearch: (() -> Void)?
+    public let onCancel: (() -> Void)?
+    @State private var isEditing = false
     
     public init(
         text: Binding<String>,
         placeholder: String = "Search...",
-        onSearch: (() -> Void)? = nil
+        onSearch: (() -> Void)? = nil,
+        onCancel: (() -> Void)? = nil
     ) {
         self._text = text
         self.placeholder = placeholder
         self.onSearch = onSearch
+        self.onCancel = onCancel
     }
     
     public var body: some View {
         HStack {
-            Image(systemName: "magnifyingglass")
-                .foregroundColor(.secondary)
-                .font(.system(size: 16))
-            
-            TextField(placeholder, text: $text)
-                .font(.system(size: 16, weight: .regular))
-                .onSubmit {
-                    onSearch?()
+            HStack {
+                Image(systemName: "magnifyingglass")
+                    .foregroundColor(.secondary)
+                    .font(.system(size: 16))
+                
+                TextField(placeholder, text: $text)
+                    .font(.system(size: 16, weight: .regular))
+                    .onTapGesture {
+                        withAnimation(.easeInOut(duration: 0.2)) {
+                            isEditing = true
+                        }
+                    }
+                    .onSubmit {
+                        onSearch?()
+                    }
+                
+                if !text.isEmpty {
+                    Button(action: {
+                        text = ""
+                    }) {
+                        Image(systemName: "xmark.circle.fill")
+                            .foregroundColor(.secondary)
+                            .font(.system(size: 16))
+                    }
                 }
+            }
+            .padding(.horizontal, 12)
+            .padding(.vertical, 8)
+            .background(Color.gray.opacity(0.1))
+            .cornerRadius(8)
             
-            if !text.isEmpty {
-                Button(action: {
-                    text = ""
-                }) {
-                    Image(systemName: "xmark.circle.fill")
-                        .foregroundColor(.secondary)
-                        .font(.system(size: 16))
+            if isEditing {
+                Button("Cancel") {
+                    withAnimation(.easeInOut(duration: 0.2)) {
+                        isEditing = false
+                        text = ""
+                    }
+                    onCancel?()
                 }
+                .font(.system(size: 16, weight: .medium))
+                .foregroundColor(.blue)
             }
         }
         .padding(.horizontal, 16)
-        .padding(.vertical, 12)
-        .background(Color(.systemGray6))
-        .cornerRadius(8)
+        .padding(.vertical, 8)
     }
 }
 
@@ -434,7 +466,7 @@ public struct CustomStepper: View {
             }
             .padding(.horizontal, 16)
             .padding(.vertical, 12)
-            .background(Color(.systemGray6))
+            .background(Color.gray.opacity(0.1))
             .cornerRadius(8)
         }
     }
@@ -447,7 +479,7 @@ public extension View {
             .textFieldStyle(PlainTextFieldStyle())
             .padding(.horizontal, 16)
             .padding(.vertical, 12)
-            .background(Color(.systemGray6))
+            .background(Color.gray.opacity(0.1))
             .cornerRadius(8)
     }
     
@@ -456,5 +488,4 @@ public extension View {
             .toggleStyle(SwitchToggleStyle(tint: .blue))
             .scaleEffect(0.9)
     }
-} 
 } 

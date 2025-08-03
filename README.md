@@ -12,9 +12,9 @@
 
 *A comprehensive collection of premium SwiftUI components designed to accelerate your iOS development with unmatched quality, performance, and design excellence.*
 
-[![GitHub stars](https://img.shields.io/github/stars/muhittincamdali/iOSUIComponents?style=social&label=Star)](https://github.com/muhittincamdali/iOSUIComponents)
-[![GitHub forks](https://img.shields.io/github/forks/muhittincamdali/iOSUIComponents?style=social&label=Fork)](https://github.com/muhittincamdali/iOSUIComponents)
-[![GitHub watchers](https://img.shields.io/github/watchers/muhittincamdali/iOSUIComponents?style=social&label=Watch)](https://github.com/muhittincamdali/iOSUIComponents)
+[![GitHub stars](https://img.shields.io/github/stars/iosuicomponents/iOSUIComponents?style=social&label=Star)](https://github.com/iosuicomponents/iOSUIComponents)
+[![GitHub forks](https://img.shields.io/github/forks/iosuicomponents/iOSUIComponents?style=social&label=Fork)](https://github.com/iosuicomponents/iOSUIComponents)
+[![GitHub watchers](https://img.shields.io/github/watchers/iosuicomponents/iOSUIComponents?style=social&label=Watch)](https://github.com/iosuicomponents/iOSUIComponents)
 
 </div>
 
@@ -95,7 +95,7 @@
 #### **Swift Package Manager**
 ```swift
 dependencies: [
-    .package(url: "https://github.com/muhittincamdali/iOSUIComponents.git", from: "1.0.0")
+    .package(url: "https://github.com/iosuicomponents/iOSUIComponents.git", from: "1.0.0")
 ]
 ```
 
@@ -467,10 +467,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support & Community
 
 - **📚 Documentation**: [Complete Documentation](Documentation/)
-- **🐛 Issues**: [GitHub Issues](https://github.com/muhittincamdali/iOSUIComponents/issues)
-- **💬 Discussions**: [GitHub Discussions](https://github.com/muhittincamdali/iOSUIComponents/discussions)
-- **📧 Email**: support@muhittincamdali.com
-- **🐦 Twitter**: [@muhittincamdali](https://twitter.com/muhittincamdali)
+- **🐛 Issues**: [GitHub Issues](https://github.com/iosuicomponents/iOSUIComponents/issues)
+- **💬 Discussions**: [GitHub Discussions](https://github.com/iosuicomponents/iOSUIComponents/discussions)
+- **📧 Email**: support@iosuicomponents.com
+- **🐦 Twitter**: [@iosuicomponents](https://twitter.com/iosuicomponents)
 
 ---
 
@@ -478,9 +478,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Made with ❤️ for the iOS development community**
 
-[![GitHub stars](https://img.shields.io/github/stars/muhittincamdali/iOSUIComponents?style=social&label=Star)](https://github.com/muhittincamdali/iOSUIComponents)
-[![GitHub forks](https://img.shields.io/github/forks/muhittincamdali/iOSUIComponents?style=social&label=Fork)](https://github.com/muhittincamdali/iOSUIComponents)
-[![GitHub watchers](https://img.shields.io/github/watchers/muhittincamdali/iOSUIComponents?style=social&label=Watch)](https://github.com/muhittincamdali/iOSUIComponents)
+[![GitHub stars](https://img.shields.io/github/stars/iosuicomponents/iOSUIComponents?style=social&label=Star)](https://github.com/iosuicomponents/iOSUIComponents)
+[![GitHub forks](https://img.shields.io/github/forks/iosuicomponents/iOSUIComponents?style=social&label=Fork)](https://github.com/iosuicomponents/iOSUIComponents)
+[![GitHub watchers](https://img.shields.io/github/watchers/iosuicomponents/iOSUIComponents?style=social&label=Watch)](https://github.com/iosuicomponents/iOSUIComponents)
 
 **⭐ Star this repository if it helped you!**
 

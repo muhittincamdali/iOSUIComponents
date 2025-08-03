@@ -72,7 +72,7 @@ public struct UserRowView: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(user.name)
                         .font(.headline)
-                        .fontWeight(.semibold)
+                        .font(.system(size: 16, weight: .semibold))
                         .foregroundColor(.primary)
                     
                     if showSubtitle {
@@ -89,7 +89,7 @@ public struct UserRowView: View {
                     .foregroundColor(.secondary)
             }
             .padding()
-            .background(Color(.systemBackground))
+            .background(Color.white)
             .cornerRadius(10)
         }
         .buttonStyle(PlainButtonStyle())
@@ -143,7 +143,7 @@ public struct SettingsRowView: View {
                 accessoryView
             }
             .padding()
-            .background(Color(.systemBackground))
+            .background(Color.white)
         }
         .buttonStyle(PlainButtonStyle())
     }
@@ -163,7 +163,7 @@ public struct SettingsRowView: View {
         case .badge(let text):
             Text(text)
                 .font(.caption2)
-                .fontWeight(.bold)
+                .font(.system(size: 16, weight: .bold))
                 .foregroundColor(.white)
                 .padding(.horizontal, 6)
                 .padding(.vertical, 2)
@@ -204,13 +204,13 @@ public struct ProductRowView: View {
                                 .aspectRatio(contentMode: .fill)
                         } placeholder: {
                             Rectangle()
-                                .fill(Color(.systemGray5))
+                                .fill(Color.gray.opacity(0.1))
                         }
                         .frame(width: 60, height: 60)
                         .cornerRadius(8)
                     } else {
                         Rectangle()
-                            .fill(Color(.systemGray5))
+                            .fill(Color.gray.opacity(0.1))
                             .frame(width: 60, height: 60)
                             .cornerRadius(8)
                     }
@@ -234,7 +234,7 @@ public struct ProductRowView: View {
                         HStack {
                             Text(product.price)
                                 .font(.subheadline)
-                                .fontWeight(.bold)
+                                .font(.system(size: 16, weight: .bold))
                                 .foregroundColor(.blue)
                             
                             if let originalPrice = product.originalPrice {
@@ -267,7 +267,7 @@ public struct ProductRowView: View {
                     .foregroundColor(.secondary)
             }
             .padding()
-            .background(Color(.systemBackground))
+            .background(Color.white)
             .cornerRadius(10)
         }
         .buttonStyle(PlainButtonStyle())
@@ -282,7 +282,7 @@ public struct ListStyle {
     public let shadowRadius: CGFloat
     
     public init(
-        backgroundColor: Color = Color(.systemGroupedBackground),
+        backgroundColor: Color = Color.gray.opacity(0.05),
         cornerRadius: CGFloat = 0,
         shadowColor: Color = .clear,
         shadowRadius: CGFloat = 0
@@ -294,9 +294,9 @@ public struct ListStyle {
     }
     
     public static let `default` = ListStyle()
-    public static let grouped = ListStyle(backgroundColor: Color(.systemGroupedBackground))
-    public static let insetGrouped = ListStyle(backgroundColor: Color(.systemGroupedBackground))
-    public static let plain = ListStyle(backgroundColor: Color(.systemBackground))
+    public static let grouped = ListStyle(backgroundColor: Color.gray.opacity(0.05))
+    public static let insetGrouped = ListStyle(backgroundColor: Color.gray.opacity(0.05))
+    public static let plain = ListStyle(backgroundColor: Color.white)
 }
 
 // MARK: - Row Accessory

@@ -21,7 +21,7 @@ Quick start guide for using iOS UI Component Library.
 ### **Swift Package Manager**
 ```swift
 dependencies: [
-    .package(url: "https://github.com/muhittincamdali/iOSUIComponents.git", from: "1.0.0")
+    .package(url: "https://github.com/iosuicomponents/iOSUIComponents.git", from: "1.0.0")
 ]
 ```
 
@@ -228,8 +228,8 @@ AsyncImage(url: URL(string: imageURL)) { image in
 ## 🤝 Support
 
 - **Documentation**: [Complete Documentation](Documentation/)
-- **Issues**: [GitHub Issues](https://github.com/muhittincamdali/iOSUIComponents/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/muhittincamdali/iOSUIComponents/discussions)
+- **Issues**: [GitHub Issues](https://github.com/iosuicomponents/iOSUIComponents/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/iosuicomponents/iOSUIComponents/discussions)
 
 ---
 

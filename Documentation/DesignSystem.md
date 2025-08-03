@@ -510,8 +510,8 @@ struct AccessibilityTesting {
 ## 🤝 Support
 
 - **Documentation**: [Complete Documentation](Documentation/)
-- **Issues**: [GitHub Issues](https://github.com/muhittincamdali/iOSUIComponents/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/muhittincamdali/iOSUIComponents/discussions)
+- **Issues**: [GitHub Issues](https://github.com/iosuicomponents/iOSUIComponents/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/iosuicomponents/iOSUIComponents/discussions)
 
 ---
 

@@ -11,7 +11,7 @@ public struct CustomTabBar: View {
     public init(
         selectedTab: Binding<Int>,
         tabs: [TabItem],
-        backgroundColor: Color = Color(.systemBackground),
+        backgroundColor: Color = Color.white,
         selectedColor: Color = .blue,
         unselectedColor: Color = .gray
     ) {
@@ -41,7 +41,7 @@ public struct CustomTabBar: View {
         .overlay(
             Rectangle()
                 .frame(height: 0.5)
-                .foregroundColor(Color(.systemGray4)),
+                .foregroundColor(Color.gray.opacity(0.1)),
             alignment: .top
         )
         .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: -2)
@@ -114,7 +114,7 @@ public struct CustomNavigationBar: View {
         title: String,
         leftButton: NavigationButton? = nil,
         rightButton: NavigationButton? = nil,
-        backgroundColor: Color = Color(.systemBackground),
+        backgroundColor: Color = Color.white,
         titleColor: Color = .primary
     ) {
         self.title = title
@@ -159,7 +159,7 @@ public struct CustomNavigationBar: View {
         .overlay(
             Rectangle()
                 .frame(height: 0.5)
-                .foregroundColor(Color(.systemGray4)),
+                .foregroundColor(Color.gray.opacity(0.1)),
             alignment: .bottom
         )
     }
@@ -190,7 +190,7 @@ public struct CustomSideMenu: View {
     public init(
         isPresented: Binding<Bool>,
         menuItems: [MenuItem],
-        backgroundColor: Color = Color(.systemBackground),
+        backgroundColor: Color = Color.white,
         overlayColor: Color = Color.black.opacity(0.5)
     ) {
         self._isPresented = isPresented
@@ -329,7 +329,7 @@ public struct CustomBreadcrumbs: View {
             .padding(.horizontal, 16)
         }
         .padding(.vertical, 8)
-        .background(Color(.systemGray6))
+        .background(Color.gray.opacity(0.1))
     }
 }
 
@@ -392,7 +392,7 @@ public struct CustomSearchBar: View {
             }
             .padding(.horizontal, 12)
             .padding(.vertical, 8)
-            .background(Color(.systemGray6))
+            .background(Color.gray.opacity(0.1))
             .cornerRadius(8)
             
             if isEditing {
@@ -468,17 +468,17 @@ public struct CustomStepIndicator: View {
 public extension View {
     func customTabBarStyle() -> some View {
         self
-            .background(Color(.systemBackground))
+            .background(Color.white)
             .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: -2)
     }
     
     func customNavigationBarStyle() -> some View {
         self
-            .background(Color(.systemBackground))
+            .background(Color.white)
             .overlay(
                 Rectangle()
                     .frame(height: 0.5)
-                    .foregroundColor(Color(.systemGray4)),
+                    .foregroundColor(Color.gray.opacity(0.1)),
                 alignment: .bottom
             )
     }

@@ -3,100 +3,79 @@ import SwiftUI
 // MARK: - Modal Components
 public struct CustomAlert: View {
     public let title: String
-    public let message: String?
-    public let primaryButton: AlertButton
-    public let secondaryButton: AlertButton?
-    public let isPresented: Binding<Bool>
+    public let message: String
+    public let buttons: [AlertButton]
+    @Binding public var isPresented: Bool
     
     public init(
         title: String,
-        message: String? = nil,
-        primaryButton: AlertButton,
-        secondaryButton: AlertButton? = nil,
+        message: String,
+        buttons: [AlertButton],
         isPresented: Binding<Bool>
     ) {
         self.title = title
         self.message = message
-        self.primaryButton = primaryButton
-        self.secondaryButton = secondaryButton
-        self.isPresented = isPresented
+        self.buttons = buttons
+        self._isPresented = isPresented
     }
     
     public var body: some View {
         ZStack {
-            Color.black.opacity(0.3)
+            Color.black.opacity(0.5)
                 .ignoresSafeArea()
                 .onTapGesture {
-                    isPresented.wrappedValue = false
+                    isPresented = false
                 }
             
             VStack(spacing: 20) {
                 VStack(spacing: 12) {
                     Text(title)
-                        .font(.headline)
-                        .fontWeight(.semibold)
+                        .font(.system(size: 18, weight: .semibold))
+                        .foregroundColor(.primary)
                         .multilineTextAlignment(.center)
                     
-                    if let message = message {
-                        Text(message)
-                            .font(.body)
-                            .foregroundColor(.secondary)
-                            .multilineTextAlignment(.center)
-                    }
+                    Text(message)
+                        .font(.system(size: 16, weight: .regular))
+                        .foregroundColor(.secondary)
+                        .multilineTextAlignment(.center)
                 }
                 
                 HStack(spacing: 12) {
-                    if let secondaryButton = secondaryButton {
+                    ForEach(buttons, id: \.title) { button in
                         Button(action: {
-                            secondaryButton.action()
-                            isPresented.wrappedValue = false
+                            button.action?()
+                            isPresented = false
                         }) {
-                            Text(secondaryButton.title)
-                                .font(.headline)
-                                .fontWeight(.semibold)
-                                .foregroundColor(secondaryButton.style.textColor)
+                            Text(button.title)
+                                .font(.system(size: 16, weight: .medium))
+                                .foregroundColor(button.style.textColor)
                                 .frame(maxWidth: .infinity)
-                                .frame(height: 44)
-                                .background(secondaryButton.style.backgroundColor)
-                                .cornerRadius(10)
+                                .padding(.vertical, 12)
+                                .background(button.style.backgroundColor)
+                                .cornerRadius(8)
                         }
-                    }
-                    
-                    Button(action: {
-                        primaryButton.action()
-                        isPresented.wrappedValue = false
-                    }) {
-                        Text(primaryButton.title)
-                            .font(.headline)
-                            .fontWeight(.semibold)
-                            .foregroundColor(primaryButton.style.textColor)
-                            .frame(maxWidth: .infinity)
-                            .frame(height: 44)
-                            .background(primaryButton.style.backgroundColor)
-                            .cornerRadius(10)
                     }
                 }
             }
             .padding(24)
-            .background(Color(.systemBackground))
+            .background(Color.white)
             .cornerRadius(16)
             .shadow(color: .black.opacity(0.2), radius: 20, x: 0, y: 10)
             .padding(.horizontal, 40)
         }
-        .opacity(isPresented.wrappedValue ? 1 : 0)
-        .animation(.easeInOut(duration: 0.2), value: isPresented.wrappedValue)
+        .transition(.opacity.combined(with: .scale))
     }
 }
 
 public struct AlertButton {
     public let title: String
     public let style: AlertButtonStyle
-    public let action: () -> Void
+    public let action: (() -> Void)?
     
     public init(
         title: String,
         style: AlertButtonStyle = .default,
-        action: @escaping () -> Void
+        action: (() -> Void)? = nil
     ) {
         self.title = title
         self.style = style
@@ -115,177 +94,171 @@ public struct AlertButtonStyle {
     
     public static let `default` = AlertButtonStyle(backgroundColor: .blue, textColor: .white)
     public static let destructive = AlertButtonStyle(backgroundColor: .red, textColor: .white)
-    public static let cancel = AlertButtonStyle(backgroundColor: Color(.systemGray5), textColor: .primary)
+    public static let cancel = AlertButtonStyle(backgroundColor: Color.gray.opacity(0.2), textColor: .primary)
 }
 
-public struct CustomSheet<Content: View>: View {
-    public let content: Content
-    public let isPresented: Binding<Bool>
-    public let style: SheetStyle
+public struct CustomSheet: View {
+    public let title: String?
+    public let content: AnyView
+    @Binding public var isPresented: Bool
     
     public init(
-        isPresented: Binding<Bool>,
-        style: SheetStyle = .default,
-        @ViewBuilder content: () -> Content
+        title: String? = nil,
+        content: AnyView,
+        isPresented: Binding<Bool>
     ) {
-        self.isPresented = isPresented
-        self.style = style
-        self.content = content()
+        self.title = title
+        self.content = content
+        self._isPresented = isPresented
     }
     
     public var body: some View {
         ZStack {
-            if isPresented.wrappedValue {
-                Color.black.opacity(0.3)
-                    .ignoresSafeArea()
-                    .onTapGesture {
-                        isPresented.wrappedValue = false
-                    }
-                
-                VStack {
-                    Spacer()
-                    
-                    VStack(spacing: 0) {
-                        // Handle
-                        RoundedRectangle(cornerRadius: 2.5)
-                            .fill(Color(.systemGray4))
-                            .frame(width: 36, height: 5)
-                            .padding(.top, 8)
-                            .padding(.bottom, 16)
-                        
-                        content
-                            .padding(.horizontal, 16)
-                            .padding(.bottom, 34)
-                    }
-                    .background(Color(.systemBackground))
-                    .cornerRadius(style.cornerRadius, corners: [.topLeft, .topRight])
-                    .shadow(color: .black.opacity(0.2), radius: 20, x: 0, y: -10)
+            Color.black.opacity(0.5)
+                .ignoresSafeArea()
+                .onTapGesture {
+                    isPresented = false
                 }
-                .transition(.move(edge: .bottom))
+            
+            VStack {
+                Spacer()
+                
+                VStack(spacing: 16) {
+                    RoundedRectangle(cornerRadius: 2.5)
+                        .fill(Color.gray.opacity(0.3))
+                        .frame(width: 36, height: 5)
+                        .padding(.top, 8)
+                    
+                    if let title = title {
+                        Text(title)
+                            .font(.system(size: 18, weight: .semibold))
+                            .foregroundColor(.primary)
+                    }
+                    
+                    content
+                        .padding(.bottom, 34)
+                }
+                .background(Color.white)
+                .cornerRadius(16)
+                .shadow(color: .black.opacity(0.2), radius: 20, x: 0, y: -10)
             }
         }
-        .animation(.easeInOut(duration: 0.3), value: isPresented.wrappedValue)
+        .transition(.move(edge: .bottom).combined(with: .opacity))
     }
-}
-
-public struct SheetStyle {
-    public let cornerRadius: CGFloat
-    
-    public init(cornerRadius: CGFloat = 16) {
-        self.cornerRadius = cornerRadius
-    }
-    
-    public static let `default` = SheetStyle()
-    public static let large = SheetStyle(cornerRadius: 20)
-    public static let medium = SheetStyle(cornerRadius: 12)
-    public static let custom = SheetStyle(cornerRadius: 24)
 }
 
 public struct CustomActionSheet: View {
     public let title: String?
     public let message: String?
-    public let buttons: [ActionButton]
-    public let isPresented: Binding<Bool>
+    public let actions: [ActionSheetAction]
+    public let cancelAction: ActionSheetAction?
+    @Binding public var isPresented: Bool
     
     public init(
         title: String? = nil,
         message: String? = nil,
-        buttons: [ActionButton],
+        actions: [ActionSheetAction],
+        cancelAction: ActionSheetAction? = nil,
         isPresented: Binding<Bool>
     ) {
         self.title = title
         self.message = message
-        self.buttons = buttons
-        self.isPresented = isPresented
+        self.actions = actions
+        self.cancelAction = cancelAction
+        self._isPresented = isPresented
     }
     
     public var body: some View {
         ZStack {
-            if isPresented.wrappedValue {
-                Color.black.opacity(0.3)
-                    .ignoresSafeArea()
-                    .onTapGesture {
-                        isPresented.wrappedValue = false
-                    }
+            Color.black.opacity(0.5)
+                .ignoresSafeArea()
+                .onTapGesture {
+                    isPresented = false
+                }
+            
+            VStack {
+                Spacer()
                 
-                VStack {
-                    Spacer()
+                VStack(spacing: 16) {
+                    RoundedRectangle(cornerRadius: 2.5)
+                        .fill(Color.gray.opacity(0.3))
+                        .frame(width: 36, height: 5)
+                        .padding(.top, 8)
+                    
+                    if let title = title {
+                        Text(title)
+                            .font(.system(size: 18, weight: .semibold))
+                            .foregroundColor(.primary)
+                    }
+                    
+                    if let message = message {
+                        Text(message)
+                            .font(.system(size: 16, weight: .regular))
+                            .foregroundColor(.secondary)
+                    }
                     
                     VStack(spacing: 0) {
-                        if let title = title {
-                            Text(title)
-                                .font(.headline)
-                                .fontWeight(.semibold)
-                                .padding(.top, 20)
-                                .padding(.bottom, 8)
-                        }
-                        
-                        if let message = message {
-                            Text(message)
-                                .font(.body)
-                                .foregroundColor(.secondary)
-                                .multilineTextAlignment(.center)
-                                .padding(.horizontal, 20)
-                                .padding(.bottom, 20)
-                        }
-                        
-                        VStack(spacing: 0) {
-                            ForEach(Array(buttons.enumerated()), id: \.offset) { index, button in
-                                Button(action: {
-                                    button.action()
-                                    isPresented.wrappedValue = false
-                                }) {
-                                    Text(button.title)
-                                        .font(.body)
-                                        .fontWeight(.medium)
-                                        .foregroundColor(button.style.textColor)
-                                        .frame(maxWidth: .infinity)
-                                        .frame(height: 50)
-                                }
-                                .background(Color(.systemBackground))
-                                
-                                if index < buttons.count - 1 {
-                                    Divider()
-                                        .padding(.leading, 20)
-                                }
+                        ForEach(actions, id: \.title) { action in
+                            Button(action: {
+                                action.action?()
+                                isPresented = false
+                            }) {
+                                Text(action.title)
+                                    .font(.system(size: 16, weight: .medium))
+                                    .foregroundColor(action.style.textColor)
+                                    .frame(maxWidth: .infinity)
+                                    .padding(.vertical, 16)
+                                    .background(action.style.backgroundColor)
+                            }
+                            .background(Color.white)
+                            .cornerRadius(16)
+                            
+                            if action != actions.last {
+                                Divider()
+                                    .padding(.horizontal, 16)
                             }
                         }
-                        .background(Color(.systemBackground))
-                        .cornerRadius(16, corners: [.topLeft, .topRight])
                         
-                        Button(action: {
-                            isPresented.wrappedValue = false
-                        }) {
-                            Text("Cancel")
-                                .font(.body)
-                                .fontWeight(.medium)
-                                .foregroundColor(.red)
-                                .frame(maxWidth: .infinity)
-                                .frame(height: 50)
+                        if let cancelAction = cancelAction {
+                            Divider()
+                                .padding(.horizontal, 16)
+                                .padding(.vertical, 8)
+                            
+                            Button(action: {
+                                cancelAction.action?()
+                                isPresented = false
+                            }) {
+                                Text(cancelAction.title)
+                                    .font(.system(size: 16, weight: .medium))
+                                    .foregroundColor(cancelAction.style.textColor)
+                                    .frame(maxWidth: .infinity)
+                                    .padding(.vertical, 16)
+                                    .background(cancelAction.style.backgroundColor)
+                            }
+                            .background(Color.white)
+                            .cornerRadius(16)
                         }
-                        .background(Color(.systemBackground))
-                        .cornerRadius(16)
-                        .padding(.top, 8)
                     }
-                    .padding(.horizontal, 16)
                     .padding(.bottom, 34)
                 }
-                .transition(.move(edge: .bottom))
+                .background(Color.white)
+                .cornerRadius(16)
+                .shadow(color: .black.opacity(0.2), radius: 20, x: 0, y: -10)
             }
         }
-        .animation(.easeInOut(duration: 0.3), value: isPresented.wrappedValue)
+        .transition(.move(edge: .bottom).combined(with: .opacity))
     }
 }
 
-public struct ActionButton {
+public struct ActionSheetAction {
     public let title: String
-    public let style: ActionButtonStyle
-    public let action: () -> Void
+    public let style: ActionSheetActionStyle
+    public let action: (() -> Void)?
     
     public init(
         title: String,
-        style: ActionButtonStyle = .default,
-        action: @escaping () -> Void
+        style: ActionSheetActionStyle = .default,
+        action: (() -> Void)? = nil
     ) {
         self.title = title
         self.style = style
@@ -293,103 +266,58 @@ public struct ActionButton {
     }
 }
 
-public struct ActionButtonStyle {
+public struct ActionSheetActionStyle {
+    public let backgroundColor: Color
     public let textColor: Color
     
-    public init(textColor: Color) {
+    public init(backgroundColor: Color, textColor: Color) {
+        self.backgroundColor = backgroundColor
         self.textColor = textColor
     }
     
-    public static let `default` = ActionButtonStyle(textColor: .blue)
-    public static let destructive = ActionButtonStyle(textColor: .red)
-    public static let cancel = ActionButtonStyle(textColor: .red)
+    public static let `default` = ActionSheetActionStyle(backgroundColor: .clear, textColor: .blue)
+    public static let destructive = ActionSheetActionStyle(backgroundColor: .clear, textColor: .red)
+    public static let cancel = ActionSheetActionStyle(backgroundColor: .clear, textColor: .secondary)
 }
 
-public struct CustomModal<Content: View>: View {
-    public let content: Content
-    public let isPresented: Binding<Bool>
-    public let style: ModalStyle
+public struct CustomModal: View {
+    public let content: AnyView
+    @Binding public var isPresented: Bool
     
     public init(
-        isPresented: Binding<Bool>,
-        style: ModalStyle = .default,
-        @ViewBuilder content: () -> Content
+        content: AnyView,
+        isPresented: Binding<Bool>
     ) {
-        self.isPresented = isPresented
-        self.style = style
-        self.content = content()
+        self.content = content
+        self._isPresented = isPresented
     }
     
     public var body: some View {
         ZStack {
-            if isPresented.wrappedValue {
-                Color.black.opacity(style.overlayOpacity)
-                    .ignoresSafeArea()
-                    .onTapGesture {
-                        if style.dismissOnOverlayTap {
-                            isPresented.wrappedValue = false
-                        }
-                    }
-                
-                content
-                    .background(Color(.systemBackground))
-                    .cornerRadius(style.cornerRadius)
-                    .shadow(color: .black.opacity(0.2), radius: style.shadowRadius, x: 0, y: style.shadowOffset)
-                    .padding(.horizontal, style.horizontalPadding)
-                    .scaleEffect(isPresented.wrappedValue ? 1 : 0.8)
-                    .opacity(isPresented.wrappedValue ? 1 : 0)
-            }
+            Color.black.opacity(0.5)
+                .ignoresSafeArea()
+                .onTapGesture {
+                    isPresented = false
+                }
+            
+            content
+                .background(Color.white)
+                .cornerRadius(16)
+                .shadow(color: .black.opacity(0.2), radius: 20, x: 0, y: 10)
+                .scaleEffect(isPresented ? 1.0 : 0.8)
+                .opacity(isPresented ? 1.0 : 0.0)
+                .animation(.spring(response: 0.3, dampingFraction: 0.8), value: isPresented)
         }
-        .animation(.easeInOut(duration: 0.3), value: isPresented.wrappedValue)
+        .transition(.opacity.combined(with: .scale))
     }
 }
 
-public struct ModalStyle {
-    public let cornerRadius: CGFloat
-    public let shadowRadius: CGFloat
-    public let shadowOffset: CGFloat
-    public let horizontalPadding: CGFloat
-    public let overlayOpacity: Double
-    public let dismissOnOverlayTap: Bool
-    
-    public init(
-        cornerRadius: CGFloat = 16,
-        shadowRadius: CGFloat = 20,
-        shadowOffset: CGFloat = 10,
-        horizontalPadding: CGFloat = 40,
-        overlayOpacity: Double = 0.3,
-        dismissOnOverlayTap: Bool = true
-    ) {
-        self.cornerRadius = cornerRadius
-        self.shadowRadius = shadowRadius
-        self.shadowOffset = shadowOffset
-        self.horizontalPadding = horizontalPadding
-        self.overlayOpacity = overlayOpacity
-        self.dismissOnOverlayTap = dismissOnOverlayTap
-    }
-    
-    public static let `default` = ModalStyle()
-    public static let large = ModalStyle(cornerRadius: 20, horizontalPadding: 20)
-    public static let small = ModalStyle(cornerRadius: 12, horizontalPadding: 60)
-}
-
-// MARK: - Extensions
-extension View {
-    func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
-        clipShape(RoundedCorner(radius: radius, corners: corners))
-    }
-}
-
-struct RoundedCorner: Shape {
-    var radius: CGFloat = .infinity
-    var corners: UIRectCorner = .allCorners
-
-    func path(in rect: CGRect) -> Path {
-        let path = UIBezierPath(
-            roundedRect: rect,
-            byRoundingCorners: corners,
-            cornerRadii: CGSize(width: radius, height: radius)
-        )
-        return Path(path.cgPath)
+// MARK: - Modal Extensions
+public extension View {
+    func customModalStyle() -> some View {
+        self
+            .background(Color.white)
+            .cornerRadius(16)
+            .shadow(color: .black.opacity(0.2), radius: 20, x: 0, y: 10)
     }
 } 

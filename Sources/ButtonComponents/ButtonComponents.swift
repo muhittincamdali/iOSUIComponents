@@ -29,7 +29,7 @@ public struct PrimaryButton: View {
                 } else {
                     Text(title)
                         .font(.headline)
-                        .fontWeight(.semibold)
+                        .font(.system(size: 16, weight: .semibold))
                 }
             }
             .foregroundColor(.white)
@@ -61,7 +61,7 @@ public struct SecondaryButton: View {
         Button(action: action) {
             Text(title)
                 .font(.headline)
-                .fontWeight(.semibold)
+                .font(.system(size: 16, weight: .semibold))
                 .foregroundColor(isEnabled ? .blue : .gray)
                 .frame(maxWidth: .infinity)
                 .frame(height: 50)
@@ -108,7 +108,7 @@ public struct IconButton: View {
             .foregroundColor(isEnabled ? .primary : .secondary)
             .padding(.horizontal, 16)
             .padding(.vertical, 12)
-            .background(Color(.systemGray6))
+            .background(Color.gray.opacity(0.1))
             .cornerRadius(8)
         }
         .disabled(!isEnabled)
@@ -134,7 +134,7 @@ public struct FloatingActionButton: View {
         Button(action: action) {
             Image(systemName: icon)
                 .font(.title2)
-                .fontWeight(.semibold)
+                .font(.system(size: 16, weight: .semibold))
                 .foregroundColor(.white)
                 .frame(width: 56, height: 56)
                 .background(backgroundColor)
@@ -182,7 +182,7 @@ public struct ToggleButton: View {
             .foregroundColor(.primary)
             .padding(.horizontal, 16)
             .padding(.vertical, 12)
-            .background(Color(.systemGray6))
+            .background(Color.gray.opacity(0.1))
             .cornerRadius(8)
         }
     }
@@ -214,7 +214,7 @@ public struct GradientButton: View {
         Button(action: action) {
             Text(title)
                 .font(.headline)
-                .fontWeight(.semibold)
+                .font(.system(size: 16, weight: .semibold))
                 .foregroundColor(.white)
                 .frame(maxWidth: .infinity)
                 .frame(height: 50)
@@ -248,7 +248,7 @@ public struct SocialButton: View {
             HStack(spacing: 12) {
                 Image(systemName: icon)
                     .font(.title3)
-                    .fontWeight(.semibold)
+                    .font(.system(size: 16, weight: .semibold))
                 
                 Text(title)
                     .font(.body)

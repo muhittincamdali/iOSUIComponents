@@ -241,10 +241,10 @@ public struct LightColorPalette: ColorPalette {
     public let secondary = Color.gray
     public let accent = Color.orange
     public let background = Color.white
-    public let surface = Color(.systemGray6)
+    public let surface = Color.gray.opacity(0.1)
     public let text = Color.black
     public let textSecondary = Color.gray
-    public let border = Color(.systemGray4)
+    public let border = Color.gray.opacity(0.1)
     public let success = Color.green
     public let warning = Color.orange
     public let error = Color.red
@@ -256,10 +256,10 @@ public struct DarkColorPalette: ColorPalette {
     public let secondary = Color.gray
     public let accent = Color.orange
     public let background = Color.black
-    public let surface = Color(.systemGray6)
+    public let surface = Color.gray.opacity(0.1)
     public let text = Color.white
     public let textSecondary = Color.gray
-    public let border = Color(.systemGray4)
+    public let border = Color.gray.opacity(0.1)
     public let success = Color.green
     public let warning = Color.orange
     public let error = Color.red

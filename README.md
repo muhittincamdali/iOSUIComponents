@@ -453,7 +453,24 @@ git push origin feature/premium-component
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+**⭐ Star this repository if it helped you!**
+
 ---
+
+## 📊 Project Statistics
+
+<div align="center">
+
+[![GitHub stars](https://img.shields.io/github/stars/muhittincamdali/iOSUIComponents?style=social)](https://github.com/muhittincamdali/iOSUIComponents/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/muhittincamdali/iOSUIComponents?style=social)](https://github.com/muhittincamdali/iOSUIComponents/network)
+[![GitHub issues](https://img.shields.io/github/issues/muhittincamdali/iOSUIComponents)](https://github.com/muhittincamdali/iOSUIComponents/issues)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/muhittincamdali/iOSUIComponents)](https://github.com/muhittincamdali/iOSUIComponents/pulls)
+
+</div>
+
+## 🌟 Stargazers
+
+[![Stargazers repo roster for @muhittincamdali/iOSUIComponents](https://reporoster.com/stars/muhittincamdali/iOSUIComponents)](https://github.com/muhittincamdali/iOSUIComponents/stargazers)
 
 ## 🙏 Acknowledgments
 

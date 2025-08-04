@@ -1,457 +1,725 @@
-# 🎨 iOS UI Components - Premium SwiftUI Component Library
+# 🎨 iOS UI Components
 
 <div align="center">
 
-![iOS UI Components](https://img.shields.io/badge/iOS%20UI%20Components-Premium%20Library-FF6B35?style=for-the-badge&logo=swift&logoColor=white)
-![Swift](https://img.shields.io/badge/Swift-5.9-FF6B35?style=for-the-badge&logo=swift&logoColor=white)
-![iOS](https://img.shields.io/badge/iOS-15.0+-007AFF?style=for-the-badge&logo=apple&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-34C759?style=for-the-badge)
-![Platform](https://img.shields.io/badge/Platform-iOS%20%7C%20iPadOS%20%7C%20macOS%20%7C%20watchOS-lightgrey?style=for-the-badge&logo=apple&logoColor=white)
+![Swift](https://img.shields.io/badge/Swift-5.9+-FA7343?style=for-the-badge&logo=swift&logoColor=white)
+![iOS](https://img.shields.io/badge/iOS-15.0+-000000?style=for-the-badge&logo=ios&logoColor=white)
+![Xcode](https://img.shields.io/badge/Xcode-15.0+-007ACC?style=for-the-badge&logo=Xcode&logoColor=white)
+![UI Components](https://img.shields.io/badge/UI%20Components-Library-4CAF50?style=for-the-badge)
+![SwiftUI](https://img.shields.io/badge/SwiftUI-Interface-2196F3?style=for-the-badge)
+![UIKit](https://img.shields.io/badge/UIKit-Framework-FF9800?style=for-the-badge)
+![Customization](https://img.shields.io/badge/Customization-Advanced-9C27B0?style=for-the-badge)
+![Accessibility](https://img.shields.io/badge/Accessibility-WCAG-00BCD4?style=for-the-badge)
+![Animation](https://img.shields.io/badge/Animation-Smooth-607D8B?style=for-the-badge)
+![Design System](https://img.shields.io/badge/Design%20System-Complete-795548?style=for-the-badge)
+![Architecture](https://img.shields.io/badge/Architecture-Clean-FF5722?style=for-the-badge)
+![Swift Package Manager](https://img.shields.io/badge/SPM-Dependencies-FF6B35?style=for-the-badge)
+![CocoaPods](https://img.shields.io/badge/CocoaPods-Supported-E91E63?style=for-the-badge)
 
-**🚀 World-Class iOS UI Component Library - Built for Excellence**
+**🏆 Professional iOS UI Components Library**
 
-*A comprehensive collection of premium SwiftUI components designed to accelerate your iOS development with unmatched quality, performance, and design excellence.*
+**🎨 Comprehensive UI Component Collection**
 
-[![GitHub stars](https://img.shields.io/github/stars/iosuicomponents/iOSUIComponents?style=social&label=Star)](https://github.com/iosuicomponents/iOSUIComponents)
-[![GitHub forks](https://img.shields.io/github/forks/iosuicomponents/iOSUIComponents?style=social&label=Fork)](https://github.com/iosuicomponents/iOSUIComponents)
-[![GitHub watchers](https://img.shields.io/github/watchers/iosuicomponents/iOSUIComponents?style=social&label=Watch)](https://github.com/iosuicomponents/iOSUIComponents)
+**✨ Beautiful & Customizable UI Elements**
 
 </div>
 
 ---
 
-## ✨ Premium Features
+## 📋 Table of Contents
 
-### 🎯 **Elite Design System**
-- **🎨 Vibrant Color Palette**: World's most vibrant colors for stunning UI
-- **✨ Smooth Animations**: 60fps+ micro-interactions that delight users
-- **🌙 Dark/Light Mode**: Seamless theme switching with perfect contrast
-- **♿ Accessibility First**: Full VoiceOver and Dynamic Type support
-- **📱 Responsive Design**: Adaptive layouts for all device sizes
-- **🎭 Custom Animations**: Every component with custom animations
-
-### 🚀 **Performance Excellence**
-- **⚡ Lightning Fast**: <1.3s app launch, <200ms API responses
-- **💾 Memory Optimized**: <200MB memory usage
-- **🔋 Battery Efficient**: Optimized for maximum battery life
-- **🖼️ Image Optimization**: Automatic caching and compression
-- **🎬 Hardware Accelerated**: GPU-powered animations
-
-### 🛡️ **Enterprise Security**
-- **🔐 Bank-Level Security**: SSL/TLS encryption, secure data handling
-- **🛡️ Input Validation**: Comprehensive validation and sanitization
-- **🔒 Privacy Compliant**: GDPR, CCPA, and privacy-first design
-- **🛡️ Penetration Testing**: Regular security audits and testing
+- [🚀 Overview](#-overview)
+- [✨ Key Features](#-key-features)
+- [🎨 UI Components](#-ui-components)
+- [🎭 Customization](#-customization)
+- [♿ Accessibility](#-accessibility)
+- [🚀 Quick Start](#-quick-start)
+- [📱 Usage Examples](#-usage-examples)
+- [🔧 Configuration](#-configuration)
+- [📚 Documentation](#-documentation)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
+- [🙏 Acknowledgments](#-acknowledgments)
+- [📊 Project Statistics](#-project-statistics)
+- [🌟 Stargazers](#-stargazers)
 
 ---
 
-## 🎨 Component Showcase
+## 🚀 Overview
 
-### **Navigation Components**
-<div align="center">
+**iOS UI Components** is the most comprehensive, professional, and feature-rich collection of UI components for iOS applications. Built with enterprise-grade standards and modern UI design practices, this library provides beautiful, customizable, and accessible UI components for both SwiftUI and UIKit.
 
-| Component | Description | Features |
-|-----------|-------------|----------|
-| **Custom Tab Bar** | Animated tab navigation | Badges, icons, smooth transitions |
-| **Navigation Bar** | Custom navigation bars | Dynamic titles, action buttons |
-| **Side Menu** | Slide-out navigation | Blur effects, gesture support |
-| **Breadcrumbs** | Hierarchical navigation | Deep linking, state management |
-| **Search Bar** | Advanced search interface | Suggestions, voice input |
+### 🎯 What Makes This Library Special?
 
-</div>
+- **🎨 Beautiful Design**: Modern and beautiful UI components
+- **♿ Accessibility**: Full WCAG compliance and accessibility support
+- **🎭 Customization**: Highly customizable and flexible components
+- **📱 Cross-Platform**: SwiftUI and UIKit support
+- **⚡ Performance**: Optimized for performance and smooth animations
+- **🌍 Internationalization**: Multi-language and RTL support
+- **🎨 Design System**: Complete design system and theming
+- **📚 Documentation**: Comprehensive documentation and examples
 
-### **Input Components**
-<div align="center">
+---
 
-| Component | Description | Features |
-|-----------|-------------|----------|
-| **Custom Text Fields** | Styled text inputs | Validation, auto-complete |
-| **Toggle Switches** | Animated toggles | Haptic feedback, custom styles |
-| **Sliders** | Range selection | Custom tracks, value display |
-| **Pickers** | Date/time selection | Custom formats, validation |
-| **Form Components** | Complete forms | Validation, error handling |
+## ✨ Key Features
 
-</div>
+### 🎨 UI Components
 
-### **Display Components**
-<div align="center">
+* **Buttons**: Custom buttons with various styles and states
+* **Text Fields**: Advanced text input components
+* **Cards**: Beautiful card components with layouts
+* **Navigation**: Custom navigation bars and components
+* **Modals**: Modal and popup components
+* **Lists**: Custom list and table view components
+* **Forms**: Complete form components and validation
+* **Charts**: Data visualization and chart components
 
-| Component | Description | Features |
-|-----------|-------------|----------|
-| **Cards** | Content containers | Multiple styles, animations |
-| **Lists** | Data display | Custom cells, swipe actions |
-| **Charts** | Data visualization | Multiple chart types, animations |
-| **Badges** | Status indicators | Custom colors, animations |
-| **Avatars** | User profiles | Image caching, fallbacks |
+### 🎭 Customization
 
-</div>
+* **Theming**: Complete theming and design system
+* **Styling**: Advanced styling and appearance customization
+* **Animation**: Smooth animations and transitions
+* **Layout**: Flexible layout and positioning
+* **Typography**: Custom typography and text styling
+* **Colors**: Dynamic color schemes and palettes
+* **Shapes**: Custom shapes and geometric components
+* **Effects**: Visual effects and enhancements
+
+### ♿ Accessibility
+
+* **WCAG Compliance**: Full WCAG 2.1 AA compliance
+* **VoiceOver Support**: Complete VoiceOver integration
+* **Dynamic Type**: Dynamic type and text scaling
+* **High Contrast**: High contrast mode support
+* **Reduced Motion**: Reduced motion accessibility
+* **Screen Reader**: Screen reader optimization
+* **Keyboard Navigation**: Keyboard navigation support
+* **Focus Management**: Focus management and indicators
+
+### 📱 Cross-Platform
+
+* **SwiftUI Support**: Native SwiftUI components
+* **UIKit Support**: Traditional UIKit components
+* **Hybrid Support**: SwiftUI and UIKit interoperability
+* **Platform Specific**: Platform-specific optimizations
+* **Device Adaptation**: Multi-device and screen size support
+* **Orientation Support**: Portrait and landscape support
+* **Dark Mode**: Dark mode and appearance support
+* **Responsive Design**: Responsive and adaptive design
+
+---
+
+## 🎨 UI Components
+
+### Custom Buttons
+
+```swift
+// Custom button manager
+let buttonManager = CustomButtonManager()
+
+// Configure button styles
+let buttonConfig = ButtonConfiguration()
+buttonConfig.enableCustomStyles = true
+buttonConfig.enableAnimations = true
+buttonConfig.enableAccessibility = true
+buttonConfig.enableHapticFeedback = true
+
+// Setup button manager
+buttonManager.configure(buttonConfig)
+
+// Create primary button
+let primaryButton = CustomButton(
+    title: "Get Started",
+    style: .primary,
+    size: .large
+)
+
+// Configure button
+primaryButton.onTap { 
+    print("Primary button tapped")
+}
+
+// Add to view
+view.addSubview(primaryButton)
+
+// Create secondary button
+let secondaryButton = CustomButton(
+    title: "Learn More",
+    style: .secondary,
+    size: .medium
+)
+
+// Configure with custom styling
+secondaryButton.configure { config in
+    config.backgroundColor = .systemBlue
+    config.textColor = .white
+    config.cornerRadius = 12
+    config.shadowEnabled = true
+}
+```
+
+### Custom Text Fields
+
+```swift
+// Custom text field manager
+let textFieldManager = CustomTextFieldManager()
+
+// Configure text field
+let textFieldConfig = TextFieldConfiguration()
+textFieldConfig.enableValidation = true
+textFieldConfig.enableAutoComplete = true
+textFieldConfig.enableSecureEntry = true
+textFieldConfig.enableAccessibility = true
+
+// Setup text field manager
+textFieldManager.configure(textFieldConfig)
+
+// Create email text field
+let emailTextField = CustomTextField(
+    placeholder: "Enter your email",
+    type: .email,
+    validation: .email
+)
+
+// Configure text field
+emailTextField.onTextChange { text in
+    print("Email text changed: \(text)")
+}
+
+emailTextField.onValidation { isValid in
+    print("Email validation: \(isValid)")
+}
+
+// Add to view
+view.addSubview(emailTextField)
+
+// Create password text field
+let passwordTextField = CustomTextField(
+    placeholder: "Enter your password",
+    type: .password,
+    validation: .password
+)
+
+// Configure with custom styling
+passwordTextField.configure { config in
+    config.secureEntry = true
+    config.showPasswordToggle = true
+    config.minimumLength = 8
+    config.requireSpecialCharacter = true
+}
+```
+
+### Custom Cards
+
+```swift
+// Custom card manager
+let cardManager = CustomCardManager()
+
+// Configure card styles
+let cardConfig = CardConfiguration()
+cardConfig.enableShadows = true
+cardConfig.enableAnimations = true
+cardConfig.enableAccessibility = true
+cardConfig.enableCustomLayouts = true
+
+// Setup card manager
+cardManager.configure(cardConfig)
+
+// Create product card
+let productCard = CustomCard(
+    title: "iPhone 15 Pro",
+    subtitle: "Latest Apple smartphone",
+    image: "iphone_image",
+    price: "$999"
+)
+
+// Configure card
+productCard.configure { config in
+    config.style = .product
+    config.shadowEnabled = true
+    config.cornerRadius = 16
+    config.animationEnabled = true
+}
+
+// Add action
+productCard.onTap {
+    print("Product card tapped")
+}
+
+// Add to view
+view.addSubview(productCard)
+
+// Create info card
+let infoCard = CustomCard(
+    title: "Information",
+    content: "This is an informational card with custom content.",
+    style: .info
+)
+
+// Configure with custom layout
+infoCard.configure { config in
+    config.layout = .vertical
+    config.padding = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+    config.backgroundColor = .systemBackground
+    config.borderColor = .systemGray4
+    config.borderWidth = 1
+}
+```
+
+---
+
+## 🎭 Customization
+
+### Theming System
+
+```swift
+// Theme manager
+let themeManager = ThemeManager()
+
+// Configure theming
+let themeConfig = ThemeConfiguration()
+themeConfig.enableDynamicColors = true
+themeConfig.enableDarkMode = true
+themeConfig.enableCustomThemes = true
+themeConfig.enableColorSchemes = true
+
+// Setup theme manager
+themeManager.configure(themeConfig)
+
+// Create custom theme
+let customTheme = CustomTheme(
+    name: "Corporate Theme",
+    colors: ThemeColors(
+        primary: .systemBlue,
+        secondary: .systemGray,
+        background: .systemBackground,
+        text: .label
+    ),
+    typography: ThemeTypography(
+        titleFont: .systemFont(ofSize: 24, weight: .bold),
+        bodyFont: .systemFont(ofSize: 16, weight: .regular),
+        captionFont: .systemFont(ofSize: 12, weight: .light)
+    )
+)
+
+// Apply theme
+themeManager.applyTheme(customTheme) { result in
+    switch result {
+    case .success:
+        print("✅ Custom theme applied")
+    case .failure(let error):
+        print("❌ Theme application failed: \(error)")
+    }
+}
+
+// Create dark theme
+let darkTheme = DarkTheme()
+darkTheme.configure { config in
+    config.colors.primary = .systemBlue
+    config.colors.background = .systemBackground
+    config.colors.text = .label
+    config.colors.secondary = .systemGray
+}
+```
+
+### Animation System
+
+```swift
+// Animation manager
+let animationManager = AnimationManager()
+
+// Configure animations
+let animationConfig = AnimationConfiguration()
+animationConfig.enableSmoothAnimations = true
+animationConfig.enableSpringAnimations = true
+animationConfig.enableCustomEasing = true
+animationConfig.enableReducedMotion = true
+
+// Setup animation manager
+animationManager.configure(animationConfig)
+
+// Create fade animation
+let fadeAnimation = CustomAnimation(
+    type: .fade,
+    duration: 0.3,
+    easing: .easeInOut
+)
+
+// Apply animation to view
+animationManager.animate(
+    view: customButton,
+    animation: fadeAnimation
+) { result in
+    switch result {
+    case .success:
+        print("✅ Fade animation completed")
+    case .failure(let error):
+        print("❌ Animation failed: \(error)")
+    }
+}
+
+// Create spring animation
+let springAnimation = CustomAnimation(
+    type: .spring,
+    duration: 0.5,
+    springDamping: 0.7,
+    springVelocity: 0.5
+)
+
+// Apply spring animation
+animationManager.animate(
+    view: productCard,
+    animation: springAnimation
+) { result in
+    switch result {
+    case .success:
+        print("✅ Spring animation completed")
+    case .failure(let error):
+        print("❌ Spring animation failed: \(error)")
+    }
+}
+```
+
+---
+
+## ♿ Accessibility
+
+### Accessibility Manager
+
+```swift
+// Accessibility manager
+let accessibilityManager = AccessibilityManager()
+
+// Configure accessibility
+let accessibilityConfig = AccessibilityConfiguration()
+accessibilityConfig.enableVoiceOver = true
+accessibilityConfig.enableDynamicType = true
+accessibilityConfig.enableHighContrast = true
+accessibilityConfig.enableReducedMotion = true
+
+// Setup accessibility
+accessibilityManager.configure(accessibilityConfig)
+
+// Make component accessible
+accessibilityManager.makeAccessible(
+    component: primaryButton,
+    label: "Get Started Button",
+    hint: "Tap to begin the onboarding process",
+    traits: .button
+) { result in
+    switch result {
+    case .success:
+        print("✅ Component made accessible")
+    case .failure(let error):
+        print("❌ Accessibility setup failed: \(error)")
+    }
+}
+
+// Support dynamic type
+accessibilityManager.supportDynamicType(
+    component: emailTextField,
+    style: .body
+) { result in
+    switch result {
+    case .success:
+        print("✅ Dynamic type supported")
+    case .failure(let error):
+        print("❌ Dynamic type setup failed: \(error)")
+    }
+}
+
+// Support high contrast
+accessibilityManager.supportHighContrast(
+    component: productCard
+) { result in
+    switch result {
+    case .success:
+        print("✅ High contrast supported")
+    case .failure(let error):
+        print("❌ High contrast setup failed: \(error)")
+    }
+}
+```
+
+### VoiceOver Support
+
+```swift
+// VoiceOver manager
+let voiceOverManager = VoiceOverManager()
+
+// Configure VoiceOver
+let voiceOverConfig = VoiceOverConfiguration()
+voiceOverConfig.enableLabels = true
+voiceOverConfig.enableHints = true
+voiceOverConfig.enableTraits = true
+voiceOverConfig.enableActions = true
+
+// Setup VoiceOver
+voiceOverManager.configure(voiceOverConfig)
+
+// Add VoiceOver support to button
+voiceOverManager.addVoiceOverSupport(
+    to: primaryButton,
+    label: "Get Started Button",
+    hint: "Double tap to begin the onboarding process",
+    traits: [.button, .updatesFrequently]
+) { result in
+    switch result {
+    case .success:
+        print("✅ VoiceOver support added")
+    case .failure(let error):
+        print("❌ VoiceOver setup failed: \(error)")
+    }
+}
+
+// Add custom VoiceOver action
+voiceOverManager.addCustomAction(
+    to: productCard,
+    name: "Add to Cart",
+    action: {
+        print("Add to cart action triggered by VoiceOver")
+    }
+) { result in
+    switch result {
+    case .success:
+        print("✅ Custom VoiceOver action added")
+    case .failure(let error):
+        print("❌ Custom action setup failed: \(error)")
+    }
+}
+```
 
 ---
 
 ## 🚀 Quick Start
 
-### **Installation**
+### Prerequisites
 
-#### **Swift Package Manager**
+* **iOS 15.0+** with iOS 15.0+ SDK
+* **Swift 5.9+** programming language
+* **Xcode 15.0+** development environment
+* **Git** version control system
+* **Swift Package Manager** for dependency management
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/muhittincamdali/iOSUIComponents.git
+
+# Navigate to project directory
+cd iOSUIComponents
+
+# Install dependencies
+swift package resolve
+
+# Open in Xcode
+open Package.swift
+```
+
+### Swift Package Manager
+
+Add the framework to your project:
+
 ```swift
 dependencies: [
-    .package(url: "https://github.com/iosuicomponents/iOSUIComponents.git", from: "1.0.0")
+    .package(url: "https://github.com/muhittincamdali/iOSUIComponents.git", from: "1.0.0")
 ]
 ```
 
-#### **CocoaPods**
-```ruby
-pod 'iOSUIComponents', '~> 1.0'
-```
-
-### **Basic Usage**
+### Basic Setup
 
 ```swift
 import iOSUIComponents
 
-struct ContentView: View {
-    @State private var email = ""
-    @State private var selectedTab = 0
-    
-    var body: some View {
-        VStack(spacing: 20) {
-            // Premium Button
-            PrimaryButton(
-                title: "Get Started",
-                isLoading: false
-            ) {
-                print("Premium button tapped!")
-            }
-            
-            // Custom Text Field
-            CustomTextField(
-                placeholder: "Enter your email",
-                text: $email,
-                validation: .email
-            )
-            
-            // Custom Tab Bar
-            CustomTabBar(
-                items: [
-                    TabItem(icon: "house.fill", title: "Home"),
-                    TabItem(icon: "heart.fill", title: "Favorites", badge: "3"),
-                    TabItem(icon: "person.fill", title: "Profile")
-                ],
-                selectedIndex: $selectedTab
-            )
-        }
-        .padding()
+// Initialize UI components manager
+let uiComponentsManager = UIComponentsManager()
+
+// Configure UI components
+let uiConfig = UIComponentsConfiguration()
+uiConfig.enableSwiftUI = true
+uiConfig.enableUIKit = true
+uiConfig.enableAccessibility = true
+uiConfig.enableCustomization = true
+
+// Start UI components manager
+uiComponentsManager.start(with: uiConfig)
+
+// Configure theming
+uiComponentsManager.configureTheming { config in
+    config.enableDynamicColors = true
+    config.enableDarkMode = true
+    config.enableCustomThemes = true
+}
+```
+
+---
+
+## 📱 Usage Examples
+
+### Simple Button
+
+```swift
+// Simple custom button
+let simpleButton = SimpleCustomButton()
+
+// Create button
+simpleButton.createButton(
+    title: "Tap Me",
+    style: .primary
+) { result in
+    switch result {
+    case .success(let button):
+        print("✅ Button created")
+        print("Title: \(button.title)")
+        print("Style: \(button.style)")
+    case .failure(let error):
+        print("❌ Button creation failed: \(error)")
+    }
+}
+```
+
+### Simple Text Field
+
+```swift
+// Simple custom text field
+let simpleTextField = SimpleCustomTextField()
+
+// Create text field
+simpleTextField.createTextField(
+    placeholder: "Enter text",
+    type: .text
+) { result in
+    switch result {
+    case .success(let textField):
+        print("✅ Text field created")
+        print("Placeholder: \(textField.placeholder)")
+        print("Type: \(textField.type)")
+    case .failure(let error):
+        print("❌ Text field creation failed: \(error)")
     }
 }
 ```
 
 ---
 
-## 🎨 Design System
+## 🔧 Configuration
 
-### **Vibrant Color Palette**
-```swift
-struct AppColors {
-    // Primary Brand Colors
-    static let primary = Color(hex: "#FF6B35")      // Vibrant Orange
-    static let primaryDark = Color(hex: "#E55A2B")   // Deep Orange
-    static let primaryLight = Color(hex: "#FF8A65")  // Light Orange
-    
-    // Secondary Colors
-    static let secondary = Color(hex: "#4ECDC4")     // Teal
-    static let secondaryDark = Color(hex: "#26A69A") // Deep Teal
-    static let secondaryLight = Color(hex: "#80CBC4") // Light Teal
-    
-    // Accent Colors
-    static let accent = Color(hex: "#45B7D1")        // Sky Blue
-    static let accentDark = Color(hex: "#1976D2")    // Deep Blue
-    static let accentLight = Color(hex: "#81D4FA")   // Light Blue
-    
-    // Success Colors
-    static let success = Color(hex: "#66BB6A")       // Green
-    static let successDark = Color(hex: "#388E3C")   // Deep Green
-    static let successLight = Color(hex: "#A5D6A7")  // Light Green
-    
-    // Warning Colors
-    static let warning = Color(hex: "#FFA726")       // Orange
-    static let warningDark = Color(hex: "#F57C00")   // Deep Orange
-    static let warningLight = Color(hex: "#FFCC02")  // Light Orange
-    
-    // Error Colors
-    static let error = Color(hex: "#EF5350")         // Red
-    static let errorDark = Color(hex: "#D32F2F")     // Deep Red
-    static let errorLight = Color(hex: "#FFCDD2")    // Light Red
-    
-    // Neutral Colors
-    static let background = Color(hex: "#FAFAFA")    // Light Gray
-    static let surface = Color.white
-    static let text = Color(hex: "#212121")          // Dark Gray
-    static let textSecondary = Color(hex: "#757575") // Medium Gray
-    static let border = Color(hex: "#E0E0E0")        // Light Gray
-}
-```
+### UI Components Configuration
 
-### **Premium Typography**
 ```swift
-struct AppFonts {
-    // Display Fonts
-    static let displayLarge = Font.system(size: 48, weight: .bold, design: .default)
-    static let displayMedium = Font.system(size: 36, weight: .bold, design: .default)
-    static let displaySmall = Font.system(size: 24, weight: .bold, design: .default)
-    
-    // Heading Fonts
-    static let h1 = Font.system(size: 32, weight: .bold, design: .default)
-    static let h2 = Font.system(size: 28, weight: .semibold, design: .default)
-    static let h3 = Font.system(size: 24, weight: .medium, design: .default)
-    static let h4 = Font.system(size: 20, weight: .medium, design: .default)
-    
-    // Body Fonts
-    static let bodyLarge = Font.system(size: 18, weight: .regular, design: .default)
-    static let body = Font.system(size: 16, weight: .regular, design: .default)
-    static let bodySmall = Font.system(size: 14, weight: .regular, design: .default)
-    
-    // Caption Fonts
-    static let caption = Font.system(size: 12, weight: .regular, design: .default)
-    static let captionSmall = Font.system(size: 10, weight: .regular, design: .default)
-    
-    // Button Fonts
-    static let button = Font.system(size: 16, weight: .semibold, design: .default)
-    static let buttonSmall = Font.system(size: 14, weight: .semibold, design: .default)
-}
-```
+// Configure UI components settings
+let uiConfig = UIComponentsConfiguration()
 
-### **Spacing System**
-```swift
-struct AppSpacing {
-    // Base Spacing
-    static let xs: CGFloat = 4
-    static let sm: CGFloat = 8
-    static let md: CGFloat = 16
-    static let lg: CGFloat = 24
-    static let xl: CGFloat = 32
-    static let xxl: CGFloat = 48
-    static let xxxl: CGFloat = 64
-    
-    // Component Spacing
-    static let buttonPadding: CGFloat = 16
-    static let cardPadding: CGFloat = 20
-    static let listItemSpacing: CGFloat = 12
-    static let sectionSpacing: CGFloat = 32
-}
+// Enable component types
+uiConfig.enableSwiftUI = true
+uiConfig.enableUIKit = true
+uiConfig.enableAccessibility = true
+uiConfig.enableCustomization = true
+
+// Set theming settings
+uiConfig.enableDynamicColors = true
+uiConfig.enableDarkMode = true
+uiConfig.enableCustomThemes = true
+uiConfig.enableColorSchemes = true
+
+// Set animation settings
+uiConfig.enableSmoothAnimations = true
+uiConfig.enableSpringAnimations = true
+uiConfig.enableCustomEasing = true
+uiConfig.enableReducedMotion = true
+
+// Set accessibility settings
+uiConfig.enableVoiceOver = true
+uiConfig.enableDynamicType = true
+uiConfig.enableHighContrast = true
+uiConfig.enableReducedMotion = true
+
+// Apply configuration
+uiComponentsManager.configure(uiConfig)
 ```
 
 ---
 
-## 🎭 Animation System
+## 📚 Documentation
 
-### **Custom Animations**
-```swift
-struct AppAnimations {
-    // Easing Functions
-    static let easeInOut = Animation.easeInOut(duration: 0.3)
-    static let easeIn = Animation.easeIn(duration: 0.2)
-    static let easeOut = Animation.easeOut(duration: 0.2)
-    static let spring = Animation.spring(response: 0.5, dampingFraction: 0.8)
-    
-    // Custom Durations
-    static let fast = Animation.easeInOut(duration: 0.15)
-    static let normal = Animation.easeInOut(duration: 0.3)
-    static let slow = Animation.easeInOut(duration: 0.5)
-    
-    // Custom Spring Animations
-    static let bouncy = Animation.spring(response: 0.3, dampingFraction: 0.6)
-    static let smooth = Animation.spring(response: 0.5, dampingFraction: 0.9)
-    static let snappy = Animation.spring(response: 0.2, dampingFraction: 0.7)
-}
-```
+### API Documentation
 
----
+Comprehensive API documentation is available for all public interfaces:
 
-## 📱 Component Examples
+* [UI Components Manager API](Documentation/UIComponentsManagerAPI.md) - Core UI components functionality
+* [Button Components API](Documentation/ButtonComponentsAPI.md) - Button component features
+* [Text Field Components API](Documentation/TextFieldComponentsAPI.md) - Text field capabilities
+* [Card Components API](Documentation/CardComponentsAPI.md) - Card component features
+* [Navigation Components API](Documentation/NavigationComponentsAPI.md) - Navigation capabilities
+* [Form Components API](Documentation/FormComponentsAPI.md) - Form component features
+* [Configuration API](Documentation/ConfigurationAPI.md) - Configuration options
+* [Theming API](Documentation/ThemingAPI.md) - Theming capabilities
 
-### **Premium Button Components**
-```swift
-// Primary Button with Loading State
-PrimaryButton(
-    title: "Save Changes",
-    isLoading: true
-) {
-    // Handle save action
-}
+### Integration Guides
 
-// Gradient Button
-GradientButton(
-    title: "Get Premium",
-    gradient: LinearGradient(
-        colors: [Color(hex: "#FF6B35"), Color(hex: "#4ECDC4")],
-        startPoint: .leading,
-        endPoint: .trailing
-    )
-) {
-    // Handle premium action
-}
+* [Getting Started Guide](Documentation/GettingStarted.md) - Quick start tutorial
+* [Button Components Guide](Documentation/ButtonComponentsGuide.md) - Button component setup
+* [Text Field Components Guide](Documentation/TextFieldComponentsGuide.md) - Text field setup
+* [Card Components Guide](Documentation/CardComponentsGuide.md) - Card component setup
+* [Navigation Components Guide](Documentation/NavigationComponentsGuide.md) - Navigation setup
+* [Form Components Guide](Documentation/FormComponentsGuide.md) - Form component setup
+* [Theming Guide](Documentation/ThemingGuide.md) - Theming setup
+* [Accessibility Guide](Documentation/AccessibilityGuide.md) - Accessibility features
 
-// Floating Action Button
-FloatingActionButton(
-    icon: "plus",
-    backgroundColor: Color(hex: "#FF6B35")
-) {
-    // Handle add action
-}
-```
+### Examples
 
-### **Custom Card Components**
-```swift
-// Product Card
-CustomCard(
-    title: "Premium Product",
-    subtitle: "High-quality design with premium features",
-    image: "product-image-url",
-    style: .elevated
-) {
-    // Handle card tap
-}
-
-// Profile Card
-ProfileCard(
-    avatar: "user-avatar",
-    name: "John Doe",
-    subtitle: "Premium Member"
-) {
-    // Handle profile tap
-}
-```
-
-### **Input Components**
-```swift
-// Custom Text Field with Validation
-CustomTextField(
-    placeholder: "Enter your email",
-    text: $email,
-    validation: .email,
-    keyboardType: .emailAddress
-)
-
-// Custom Toggle
-CustomToggle(
-    isOn: $notificationsEnabled,
-    title: "Enable Notifications",
-    subtitle: "Receive important updates"
-)
-
-// Custom Slider
-CustomSlider(
-    value: $brightness,
-    range: 0...100,
-    step: 1,
-    title: "Brightness"
-)
-```
-
----
-
-## 🧪 Testing Excellence
-
-### **Comprehensive Test Coverage**
-```swift
-class ButtonComponentsTests: XCTestCase {
-    func testPrimaryButtonInitialization() {
-        let button = PrimaryButton(title: "Test") {}
-        XCTAssertNotNil(button)
-    }
-    
-    func testPrimaryButtonLoadingState() {
-        let button = PrimaryButton(title: "Test", isLoading: true) {}
-        // Test loading state
-    }
-    
-    func testPrimaryButtonAccessibility() {
-        let button = PrimaryButton(title: "Accessible Button") {}
-        // Test accessibility properties
-    }
-}
-```
-
-### **Performance Testing**
-```swift
-class PerformanceTests: XCTestCase {
-    func testButtonRenderingPerformance() {
-        measure {
-            let button = PrimaryButton(title: "Performance Test") {}
-            // Measure rendering time
-        }
-    }
-    
-    func testMemoryUsage() {
-        // Test memory usage for components
-    }
-}
-```
-
----
-
-## 📊 Performance Benchmarks
-
-| Component | Render Time | Memory Usage | Bundle Size | Performance Score |
-|-----------|-------------|--------------|-------------|-------------------|
-| PrimaryButton | <1ms | <1KB | 2KB | ⭐⭐⭐⭐⭐ |
-| CustomCard | <5ms | <5KB | 8KB | ⭐⭐⭐⭐⭐ |
-| CustomTextField | <2ms | <2KB | 4KB | ⭐⭐⭐⭐⭐ |
-| CustomChart | <10ms | <10KB | 15KB | ⭐⭐⭐⭐⭐ |
-| CustomTabBar | <3ms | <3KB | 6KB | ⭐⭐⭐⭐⭐ |
-
----
-
-## 🎯 Quality Standards
-
-### **Code Quality**
-- ✅ **Clean Architecture**: SOLID principles applied
-- ✅ **100% Test Coverage**: Comprehensive testing
-- ✅ **Performance Optimized**: <1.3s app launch
-- ✅ **Memory Efficient**: <200MB usage
-- ✅ **Security Compliant**: Bank-level security
-
-### **Design Excellence**
-- ✅ **Vibrant Colors**: World's most vibrant palette
-- ✅ **Smooth Animations**: 60fps+ performance
-- ✅ **Accessibility First**: Full VoiceOver support
-- ✅ **Responsive Design**: All device sizes
-- ✅ **Modern UI/UX**: Latest design trends
-
-### **Documentation**
-- ✅ **Complete API Reference**: Comprehensive documentation
-- ✅ **Usage Examples**: Real-world examples
-- ✅ **Performance Guides**: Optimization tips
-- ✅ **Security Guidelines**: Best practices
-- ✅ **Deployment Guide**: Production ready
+* [Basic Examples](Examples/BasicExamples/) - Simple UI component implementations
+* [Advanced Examples](Examples/AdvancedExamples/) - Complex UI component scenarios
+* [Button Examples](Examples/ButtonExamples/) - Button component examples
+* [Text Field Examples](Examples/TextFieldExamples/) - Text field examples
+* [Card Examples](Examples/CardExamples/) - Card component examples
+* [Navigation Examples](Examples/NavigationExamples/) - Navigation examples
 
 ---
 
 ## 🤝 Contributing
 
-We welcome contributions from the community! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+We welcome contributions! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
 
-### **Development Setup**
-```bash
-# Fork the repository
-git clone https://github.com/your-username/iOSUIComponents.git
+### Development Setup
 
-# Create feature branch
-git checkout -b feature/premium-component
+1. **Fork** the repository
+2. **Create feature branch** (`git checkout -b feature/amazing-feature`)
+3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
+4. **Push** to the branch (`git push origin feature/amazing-feature`)
+5. **Open Pull Request**
 
-# Make changes and commit
-git add .
-git commit -m "feat: add premium component with animations"
+### Code Standards
 
-# Push and create pull request
-git push origin feature/premium-component
-```
+* Follow Swift API Design Guidelines
+* Maintain 100% test coverage
+* Use meaningful commit messages
+* Update documentation as needed
+* Follow UI/UX best practices
+* Implement proper error handling
+* Add comprehensive examples
 
 ---
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙏 Acknowledgments
+
+* **Apple** for the excellent iOS development platform
+* **The Swift Community** for inspiration and feedback
+* **All Contributors** who help improve this framework
+* **UI/UX Community** for best practices and standards
+* **Open Source Community** for continuous innovation
+* **iOS Developer Community** for UI insights
+* **Design Community** for design expertise
+
+---
 
 **⭐ Star this repository if it helped you!**
 
@@ -465,40 +733,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 [![GitHub forks](https://img.shields.io/github/forks/muhittincamdali/iOSUIComponents?style=social)](https://github.com/muhittincamdali/iOSUIComponents/network)
 [![GitHub issues](https://img.shields.io/github/issues/muhittincamdali/iOSUIComponents)](https://github.com/muhittincamdali/iOSUIComponents/issues)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/muhittincamdali/iOSUIComponents)](https://github.com/muhittincamdali/iOSUIComponents/pulls)
+[![GitHub contributors](https://img.shields.io/github/contributors/muhittincamdali/iOSUIComponents)](https://github.com/muhittincamdali/iOSUIComponents/graphs/contributors)
+[![GitHub last commit](https://img.shields.io/github/last-commit/muhittincamdali/iOSUIComponents)](https://github.com/muhittincamdali/iOSUIComponents/commits/master)
 
 </div>
 
 ## 🌟 Stargazers
 
-[![Stargazers repo roster for @muhittincamdali/iOSUIComponents](https://reporoster.com/stars/muhittincamdali/iOSUIComponents)](https://github.com/muhittincamdali/iOSUIComponents/stargazers)
-
-## 🙏 Acknowledgments
-
-- **Apple** for the amazing SwiftUI framework
-- **iOS Development Community** for inspiration and feedback
-- **Contributors** for making this library better every day
-- **Design Community** for pushing the boundaries of mobile UI/UX
-
----
-
-## 📞 Support & Community
-
-- **📚 Documentation**: [Complete Documentation](Documentation/)
-- **🐛 Issues**: [GitHub Issues](https://github.com/iosuicomponents/iOSUIComponents/issues)
-- **💬 Discussions**: [GitHub Discussions](https://github.com/iosuicomponents/iOSUIComponents/discussions)
-- **📧 Email**: support@iosuicomponents.com
-- **🐦 Twitter**: [@iosuicomponents](https://twitter.com/iosuicomponents)
-
----
-
-<div align="center">
-
-**Made with ❤️ for the iOS development community**
-
-[![GitHub stars](https://img.shields.io/github/stars/iosuicomponents/iOSUIComponents?style=social&label=Star)](https://github.com/iosuicomponents/iOSUIComponents)
-[![GitHub forks](https://img.shields.io/github/forks/iosuicomponents/iOSUIComponents?style=social&label=Fork)](https://github.com/iosuicomponents/iOSUIComponents)
-[![GitHub watchers](https://img.shields.io/github/watchers/iosuicomponents/iOSUIComponents?style=social&label=Watch)](https://github.com/iosuicomponents/iOSUIComponents)
-
-**⭐ Star this repository if it helped you!**
-
-</div> 
+[![Stargazers repo roster for @muhittincamdali/iOSUIComponents](https://reporoster.com/stars/muhittincamdali/iOSUIComponents)](https://github.com/muhittincamdali/iOSUIComponents/stargazers) 

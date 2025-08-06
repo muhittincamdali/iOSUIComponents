@@ -1,1 +1,1 @@
-# ThemingGuide
+# Theming Guide

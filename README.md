@@ -56,7 +56,6 @@
 - **🎭 Customization**: Highly customizable and flexible components
 - **📱 Cross-Platform**: SwiftUI and UIKit support
 - **⚡ Performance**: Optimized for performance and smooth animations
-- **🌍 Internationalization**: Multi-language and RTL support
 - **🎨 Design System**: Complete design system and theming
 - **📚 Documentation**: Comprehensive documentation and examples
 
@@ -130,7 +129,6 @@ buttonManager.configure(buttonConfig)
 
 // Create primary button
 let primaryButton = CustomButton(
-    title: "Get Started",
     style: .primary,
     size: .large
 )
@@ -145,7 +143,6 @@ view.addSubview(primaryButton)
 
 // Create secondary button
 let secondaryButton = CustomButton(
-    title: "Learn More",
     style: .secondary,
     size: .medium
 )
@@ -228,10 +225,7 @@ cardManager.configure(cardConfig)
 
 // Create product card
 let productCard = CustomCard(
-    title: "iPhone 15 Pro",
-    subtitle: "Latest Apple smartphone",
     image: "iphone_image",
-    price: "$999"
 )
 
 // Configure card
@@ -252,7 +246,6 @@ view.addSubview(productCard)
 
 // Create info card
 let infoCard = CustomCard(
-    title: "Information",
     content: "This is an informational card with custom content.",
     style: .info
 )
@@ -297,7 +290,6 @@ let customTheme = CustomTheme(
         text: .label
     ),
     typography: ThemeTypography(
-        titleFont: .systemFont(ofSize: 24, weight: .bold),
         bodyFont: .systemFont(ofSize: 16, weight: .regular),
         captionFont: .systemFont(ofSize: 12, weight: .light)
     )
@@ -463,7 +455,6 @@ voiceOverManager.addVoiceOverSupport(
     to: primaryButton,
     label: "Get Started Button",
     hint: "Double tap to begin the onboarding process",
-    traits: [.button, .updatesFrequently]
 ) { result in
     switch result {
     case .success:
@@ -506,7 +497,6 @@ voiceOverManager.addCustomAction(
 
 ```bash
 # Clone the repository
-git clone https://github.com/muhittincamdali/iOSUIComponents.git
 
 # Navigate to project directory
 cd iOSUIComponents
@@ -524,7 +514,6 @@ Add the framework to your project:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/muhittincamdali/iOSUIComponents.git", from: "1.0.0")
 ]
 ```
 
@@ -566,13 +555,11 @@ let simpleButton = SimpleCustomButton()
 
 // Create button
 simpleButton.createButton(
-    title: "Tap Me",
     style: .primary
 ) { result in
     switch result {
     case .success(let button):
         print("✅ Button created")
-        print("Title: \(button.title)")
         print("Style: \(button.style)")
     case .failure(let error):
         print("❌ Button creation failed: \(error)")
@@ -729,15 +716,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-[![GitHub stars](https://img.shields.io/github/stars/muhittincamdali/iOSUIComponents?style=social)](https://github.com/muhittincamdali/iOSUIComponents/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/muhittincamdali/iOSUIComponents?style=social)](https://github.com/muhittincamdali/iOSUIComponents/network)
-[![GitHub issues](https://img.shields.io/github/issues/muhittincamdali/iOSUIComponents)](https://github.com/muhittincamdali/iOSUIComponents/issues)
-[![GitHub pull requests](https://img.shields.io/github/issues-pr/muhittincamdali/iOSUIComponents)](https://github.com/muhittincamdali/iOSUIComponents/pulls)
-[![GitHub contributors](https://img.shields.io/github/contributors/muhittincamdali/iOSUIComponents)](https://github.com/muhittincamdali/iOSUIComponents/graphs/contributors)
-[![GitHub last commit](https://img.shields.io/github/last-commit/muhittincamdali/iOSUIComponents)](https://github.com/muhittincamdali/iOSUIComponents/commits/master)
 
 </div>
 
 ## 🌟 Stargazers
 
-[![Stargazers repo roster for @muhittincamdali/iOSUIComponents](https://reporoster.com/stars/muhittincamdali/iOSUIComponents)](https://github.com/muhittincamdali/iOSUIComponents/stargazers) 

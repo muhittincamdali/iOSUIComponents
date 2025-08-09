@@ -1,5 +1,44 @@
 # Accessibility Guide
 
+<!-- TOC START -->
+## Table of Contents
+- [Accessibility Guide](#accessibility-guide)
+- [Overview](#overview)
+- [Core Accessibility Features](#core-accessibility-features)
+  - [VoiceOver Support](#voiceover-support)
+  - [Dynamic Type Support](#dynamic-type-support)
+  - [High Contrast Support](#high-contrast-support)
+- [Implementation Examples](#implementation-examples)
+  - [Button Accessibility](#button-accessibility)
+  - [Text Field Accessibility](#text-field-accessibility)
+  - [Card Accessibility](#card-accessibility)
+- [SwiftUI Accessibility](#swiftui-accessibility)
+  - [SwiftUI Accessibility Support](#swiftui-accessibility-support)
+  - [SwiftUI Usage](#swiftui-usage)
+- [Best Practices](#best-practices)
+  - [General Accessibility Guidelines](#general-accessibility-guidelines)
+  - [VoiceOver Best Practices](#voiceover-best-practices)
+  - [Dynamic Type Best Practices](#dynamic-type-best-practices)
+  - [High Contrast Best Practices](#high-contrast-best-practices)
+- [Testing Accessibility](#testing-accessibility)
+  - [VoiceOver Testing](#voiceover-testing)
+  - [Dynamic Type Testing](#dynamic-type-testing)
+  - [High Contrast Testing](#high-contrast-testing)
+- [Common Accessibility Issues](#common-accessibility-issues)
+  - [Missing Labels](#missing-labels)
+  - [Insufficient Contrast](#insufficient-contrast)
+  - [Small Touch Targets](#small-touch-targets)
+- [Accessibility Configuration](#accessibility-configuration)
+  - [Global Accessibility Settings](#global-accessibility-settings)
+  - [Component-Specific Accessibility](#component-specific-accessibility)
+- [Error Handling](#error-handling)
+  - [Accessibility Errors](#accessibility-errors)
+- [Performance Considerations](#performance-considerations)
+  - [Accessibility Performance](#accessibility-performance)
+- [Support](#support)
+<!-- TOC END -->
+
+
 ## Overview
 
 The Accessibility Guide provides comprehensive information about implementing accessibility features in iOS UI Components. This guide covers VoiceOver support, Dynamic Type, High Contrast mode, and other accessibility best practices.

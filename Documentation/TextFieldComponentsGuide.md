@@ -1,5 +1,56 @@
 # Text Field Components Guide
 
+<!-- TOC START -->
+## Table of Contents
+- [Text Field Components Guide](#text-field-components-guide)
+- [Overview](#overview)
+- [Getting Started](#getting-started)
+  - [Basic Text Field Creation](#basic-text-field-creation)
+  - [Text Field Configuration](#text-field-configuration)
+- [Text Field Types](#text-field-types)
+  - [Text Input](#text-input)
+  - [Email Input](#email-input)
+  - [Password Input](#password-input)
+  - [Number Input](#number-input)
+  - [Phone Input](#phone-input)
+- [Text Field Validation](#text-field-validation)
+  - [Required Field Validation](#required-field-validation)
+  - [Length Validation](#length-validation)
+  - [Pattern Validation](#pattern-validation)
+  - [Custom Validation](#custom-validation)
+- [Text Field Styling](#text-field-styling)
+  - [Basic Styling](#basic-styling)
+  - [Custom Styling](#custom-styling)
+- [Text Field Interactions](#text-field-interactions)
+  - [Text Change Handling](#text-change-handling)
+  - [Focus Handling](#focus-handling)
+  - [Validation Handling](#validation-handling)
+- [Text Field Accessibility](#text-field-accessibility)
+  - [VoiceOver Support](#voiceover-support)
+  - [Dynamic Type Support](#dynamic-type-support)
+  - [High Contrast Support](#high-contrast-support)
+- [SwiftUI Support](#swiftui-support)
+  - [SwiftUI Text Field](#swiftui-text-field)
+  - [SwiftUI Usage](#swiftui-usage)
+- [Best Practices](#best-practices)
+  - [Text Field Design](#text-field-design)
+  - [Text Field Validation](#text-field-validation)
+  - [Text Field Interactions](#text-field-interactions)
+- [Common Patterns](#common-patterns)
+  - [Form Text Field](#form-text-field)
+  - [Search Text Field](#search-text-field)
+  - [Password Text Field](#password-text-field)
+- [Error Handling](#error-handling)
+  - [Text Field Errors](#text-field-errors)
+- [Performance Considerations](#performance-considerations)
+  - [Text Field Performance](#text-field-performance)
+- [Migration Guide](#migration-guide)
+  - [From UITextField](#from-uitextfield)
+  - [From SwiftUI TextField](#from-swiftui-textfield)
+- [Support](#support)
+<!-- TOC END -->
+
+
 ## Overview
 
 The Text Field Components Guide provides comprehensive information about using text field components in iOS UI Components. This guide covers text field creation, validation, styling, accessibility, and best practices.

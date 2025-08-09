@@ -1,5 +1,47 @@
 # Form Components API
 
+<!-- TOC START -->
+## Table of Contents
+- [Form Components API](#form-components-api)
+- [Overview](#overview)
+- [Core Components](#core-components)
+  - [CustomForm](#customform)
+  - [FormField](#formfield)
+  - [FormFieldType](#formfieldtype)
+- [Configuration](#configuration)
+  - [FormConfiguration](#formconfiguration)
+- [Usage Examples](#usage-examples)
+  - [Basic Form](#basic-form)
+  - [Advanced Form with Conditional Fields](#advanced-form-with-conditional-fields)
+  - [Multi-Step Form](#multi-step-form)
+- [SwiftUI Support](#swiftui-support)
+  - [SwiftUI Form Component](#swiftui-form-component)
+  - [SwiftUI Usage](#swiftui-usage)
+- [Validation](#validation)
+  - [Built-in Validation Types](#built-in-validation-types)
+  - [Custom Validation](#custom-validation)
+- [Accessibility](#accessibility)
+  - [VoiceOver Support](#voiceover-support)
+  - [Dynamic Type Support](#dynamic-type-support)
+- [Error Handling](#error-handling)
+  - [Form Errors](#form-errors)
+- [Performance Considerations](#performance-considerations)
+  - [Memory Management](#memory-management)
+  - [Rendering Performance](#rendering-performance)
+- [Best Practices](#best-practices)
+  - [Form Design](#form-design)
+  - [Code Organization](#code-organization)
+- [Migration Guide](#migration-guide)
+  - [From UIKit Forms](#from-uikit-forms)
+  - [From SwiftUI Forms](#from-swiftui-forms)
+- [Version History](#version-history)
+  - [Version 1.0.0](#version-100)
+  - [Version 1.1.0](#version-110)
+  - [Version 1.2.0](#version-120)
+- [Support](#support)
+<!-- TOC END -->
+
+
 ## Overview
 
 The Form Components API provides comprehensive form components for iOS applications. This API supports both SwiftUI and UIKit, offering enterprise-grade form solutions with validation, auto-completion, accessibility features, and customizable styling.

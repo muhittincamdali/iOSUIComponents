@@ -1,5 +1,42 @@
 # 🎨 Customization Guide
 
+<!-- TOC START -->
+## Table of Contents
+- [🎨 Customization Guide](#-customization-guide)
+- [📋 Table of Contents](#-table-of-contents)
+- [🎨 Theme Customization](#-theme-customization)
+  - [**Creating Custom Themes**](#creating-custom-themes)
+  - [**Applying Custom Themes**](#applying-custom-themes)
+  - [**Dynamic Theme Switching**](#dynamic-theme-switching)
+- [🧩 Component Customization](#-component-customization)
+  - [**Button Customization**](#button-customization)
+  - [**Card Customization**](#card-customization)
+  - [**TextField Customization**](#textfield-customization)
+- [🎨 Color Customization](#-color-customization)
+  - [**Color Palette Creation**](#color-palette-creation)
+  - [**Gradient Customization**](#gradient-customization)
+  - [**Color Utilities**](#color-utilities)
+- [📝 Typography Customization](#-typography-customization)
+  - [**Custom Font System**](#custom-font-system)
+  - [**Dynamic Type Support**](#dynamic-type-support)
+  - [**Font Utilities**](#font-utilities)
+- [🎭 Animation Customization](#-animation-customization)
+  - [**Custom Animations**](#custom-animations)
+  - [**Animation Modifiers**](#animation-modifiers)
+  - [**Transition Animations**](#transition-animations)
+- [📐 Layout Customization](#-layout-customization)
+  - [**Custom Spacing**](#custom-spacing)
+  - [**Layout Utilities**](#layout-utilities)
+  - [**Grid Layout**](#grid-layout)
+- [🔧 Advanced Customization](#-advanced-customization)
+  - [**Custom View Modifiers**](#custom-view-modifiers)
+  - [**Custom Environment Values**](#custom-environment-values)
+  - [**Custom Preference Keys**](#custom-preference-keys)
+- [📚 Next Steps](#-next-steps)
+- [🤝 Support](#-support)
+<!-- TOC END -->
+
+
 Complete customization documentation for iOS UI Components.
 
 ## 📋 Table of Contents

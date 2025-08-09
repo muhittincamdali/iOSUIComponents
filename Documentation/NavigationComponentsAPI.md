@@ -1,5 +1,45 @@
 # Navigation Components API
 
+<!-- TOC START -->
+## Table of Contents
+- [Navigation Components API](#navigation-components-api)
+- [Overview](#overview)
+- [Core Components](#core-components)
+  - [CustomNavigationBar](#customnavigationbar)
+  - [CustomTabBar](#customtabbar)
+  - [TabBarItem](#tabbaritem)
+- [Configuration](#configuration)
+  - [NavigationBarConfiguration](#navigationbarconfiguration)
+  - [TabBarConfiguration](#tabbarconfiguration)
+- [Usage Examples](#usage-examples)
+  - [Basic Navigation Bar](#basic-navigation-bar)
+  - [Custom Tab Bar](#custom-tab-bar)
+  - [Transparent Navigation Bar](#transparent-navigation-bar)
+- [SwiftUI Support](#swiftui-support)
+  - [SwiftUI Navigation Bar](#swiftui-navigation-bar)
+  - [SwiftUI Tab Bar](#swiftui-tab-bar)
+- [Accessibility](#accessibility)
+  - [VoiceOver Support](#voiceover-support)
+  - [Tab Bar Accessibility](#tab-bar-accessibility)
+- [Error Handling](#error-handling)
+  - [Navigation Errors](#navigation-errors)
+- [Performance Considerations](#performance-considerations)
+  - [Memory Management](#memory-management)
+  - [Rendering Performance](#rendering-performance)
+- [Best Practices](#best-practices)
+  - [Navigation Design](#navigation-design)
+  - [Code Organization](#code-organization)
+- [Migration Guide](#migration-guide)
+  - [From UINavigationBar](#from-uinavigationbar)
+  - [From UITabBar](#from-uitabbar)
+- [Version History](#version-history)
+  - [Version 1.0.0](#version-100)
+  - [Version 1.1.0](#version-110)
+  - [Version 1.2.0](#version-120)
+- [Support](#support)
+<!-- TOC END -->
+
+
 ## Overview
 
 The Navigation Components API provides comprehensive navigation components for iOS applications. This API supports both SwiftUI and UIKit, offering enterprise-grade navigation solutions with custom navigation bars, tab bars, side menus, and advanced navigation patterns.

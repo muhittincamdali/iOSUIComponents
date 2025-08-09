@@ -1,5 +1,48 @@
 # Text Field Components API
 
+<!-- TOC START -->
+## Table of Contents
+- [Text Field Components API](#text-field-components-api)
+- [Overview](#overview)
+- [Core Components](#core-components)
+  - [CustomTextField](#customtextfield)
+  - [TextFieldType](#textfieldtype)
+  - [TextFieldValidation](#textfieldvalidation)
+- [Configuration](#configuration)
+  - [TextFieldConfiguration](#textfieldconfiguration)
+- [Usage Examples](#usage-examples)
+  - [Basic Text Field](#basic-text-field)
+  - [Email Text Field with Validation](#email-text-field-with-validation)
+  - [Password Text Field](#password-text-field)
+  - [Phone Number Text Field](#phone-number-text-field)
+- [Accessibility](#accessibility)
+  - [VoiceOver Support](#voiceover-support)
+  - [Dynamic Type Support](#dynamic-type-support)
+- [Validation](#validation)
+  - [Built-in Validation Types](#built-in-validation-types)
+  - [Custom Validation](#custom-validation)
+- [SwiftUI Support](#swiftui-support)
+  - [SwiftUI Text Field Component](#swiftui-text-field-component)
+  - [SwiftUI Usage](#swiftui-usage)
+- [Error Handling](#error-handling)
+  - [Text Field Errors](#text-field-errors)
+- [Performance Considerations](#performance-considerations)
+  - [Memory Management](#memory-management)
+  - [Rendering Performance](#rendering-performance)
+- [Best Practices](#best-practices)
+  - [Text Field Design](#text-field-design)
+  - [Code Organization](#code-organization)
+- [Migration Guide](#migration-guide)
+  - [From UITextField](#from-uitextfield)
+  - [From SwiftUI TextField](#from-swiftui-textfield)
+- [Version History](#version-history)
+  - [Version 1.0.0](#version-100)
+  - [Version 1.1.0](#version-110)
+  - [Version 1.2.0](#version-120)
+- [Support](#support)
+<!-- TOC END -->
+
+
 ## Overview
 
 The Text Field Components API provides advanced text input components for iOS applications. This API supports both SwiftUI and UIKit, offering enterprise-grade text field solutions with validation, auto-completion, accessibility features, and customizable styling.

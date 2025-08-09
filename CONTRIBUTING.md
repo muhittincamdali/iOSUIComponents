@@ -12,6 +12,10 @@ Thank you for your interest in contributing to iOS UI Components! This document 
 - [Documentation](#documentation)
 - [Pull Request Process](#pull-request-process)
 - [Release Process](#release-process)
+- [Community Guidelines](#community-guidelines)
+- [Performance Standards](#performance-standards)
+- [Accessibility Standards](#accessibility-standards)
+- [Security Guidelines](#security-guidelines)
 
 ## Code of Conduct
 
@@ -463,4 +467,72 @@ Contributors will be recognized in:
 - Release notes
 - GitHub contributors page
 
-Thank you for contributing to iOS UI Components! 
+Thank you for contributing to iOS UI Components!
+
+## Community Guidelines
+
+### Communication Standards
+
+- **Respectful Communication**: Always be respectful and professional
+- **Constructive Feedback**: Provide constructive and helpful feedback
+- **Inclusive Environment**: Welcome contributors from all backgrounds
+- **Clear Communication**: Use clear and concise language
+- **Active Listening**: Listen to community feedback and suggestions
+
+### Contribution Recognition
+
+- **Contributor Recognition**: All contributors are recognized in README.md
+- **Release Notes**: Contributors are mentioned in release notes
+- **GitHub Profile**: Contributors appear on GitHub contributors page
+- **Community Hall of Fame**: Special recognition for significant contributions
+
+## Performance Standards
+
+### Code Performance
+
+- **Memory Efficiency**: Optimize memory usage and avoid leaks
+- **CPU Performance**: Minimize CPU usage and optimize algorithms
+- **Battery Life**: Consider battery impact of features
+- **Network Efficiency**: Optimize network requests and caching
+- **Rendering Performance**: Ensure smooth UI rendering
+
+### Testing Performance
+
+- **Unit Test Performance**: Fast and efficient unit tests
+- **Integration Test Performance**: Optimized integration tests
+- **UI Test Performance**: Efficient UI test execution
+- **Performance Benchmarks**: Regular performance benchmarking
+
+## Accessibility Standards
+
+### WCAG Compliance
+
+- **WCAG 2.1 AA**: Full compliance with WCAG 2.1 AA standards
+- **VoiceOver Support**: Complete VoiceOver integration
+- **Dynamic Type**: Support for dynamic type scaling
+- **High Contrast**: High contrast mode support
+- **Reduced Motion**: Respect reduced motion preferences
+
+### Testing Accessibility
+
+- **Accessibility Testing**: Comprehensive accessibility testing
+- **Screen Reader Testing**: Test with screen readers
+- **Keyboard Navigation**: Test keyboard-only navigation
+- **Focus Management**: Proper focus management testing
+
+## Security Guidelines
+
+### Code Security
+
+- **Input Validation**: Validate all user inputs
+- **Data Protection**: Protect sensitive data
+- **Secure Communication**: Use secure communication protocols
+- **Privacy Compliance**: Follow privacy regulations
+- **Vulnerability Prevention**: Prevent common vulnerabilities
+
+### Security Testing
+
+- **Security Audits**: Regular security audits
+- **Penetration Testing**: Security penetration testing
+- **Code Review**: Security-focused code reviews
+- **Dependency Scanning**: Regular dependency vulnerability scanning 

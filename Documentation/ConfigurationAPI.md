@@ -1,5 +1,46 @@
 # Configuration API
 
+<!-- TOC START -->
+## Table of Contents
+- [Configuration API](#configuration-api)
+- [Overview](#overview)
+- [Core Components](#core-components)
+  - [UIComponentsConfiguration](#uicomponentsconfiguration)
+  - [ThemeConfiguration](#themeconfiguration)
+  - [AnimationConfiguration](#animationconfiguration)
+- [Usage Examples](#usage-examples)
+  - [Basic Configuration](#basic-configuration)
+  - [Advanced Configuration](#advanced-configuration)
+  - [Theme Configuration](#theme-configuration)
+  - [Animation Configuration](#animation-configuration)
+- [Configuration Management](#configuration-management)
+  - [Configuration Manager](#configuration-manager)
+  - [Configuration Validation](#configuration-validation)
+- [Dynamic Configuration Updates](#dynamic-configuration-updates)
+  - [Runtime Updates](#runtime-updates)
+  - [Configuration Observers](#configuration-observers)
+- [Performance Configuration](#performance-configuration)
+  - [Caching Configuration](#caching-configuration)
+  - [Memory Optimization](#memory-optimization)
+- [Error Handling](#error-handling)
+  - [Configuration Errors](#configuration-errors)
+- [SwiftUI Support](#swiftui-support)
+  - [SwiftUI Configuration](#swiftui-configuration)
+  - [SwiftUI Usage](#swiftui-usage)
+- [Best Practices](#best-practices)
+  - [Configuration Design](#configuration-design)
+  - [Code Organization](#code-organization)
+- [Migration Guide](#migration-guide)
+  - [From Manual Configuration](#from-manual-configuration)
+  - [From Hardcoded Values](#from-hardcoded-values)
+- [Version History](#version-history)
+  - [Version 1.0.0](#version-100)
+  - [Version 1.1.0](#version-110)
+  - [Version 1.2.0](#version-120)
+- [Support](#support)
+<!-- TOC END -->
+
+
 ## Overview
 
 The Configuration API provides comprehensive configuration management for iOS UI Components. This API supports centralized configuration, dynamic updates, theme management, and performance optimization settings.

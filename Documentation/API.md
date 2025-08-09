@@ -1,5 +1,46 @@
 # 📚 API Reference
 
+<!-- TOC START -->
+## Table of Contents
+- [📚 API Reference](#-api-reference)
+- [📋 Table of Contents](#-table-of-contents)
+- [🔘 Button Components](#-button-components)
+  - [**PrimaryButton**](#primarybutton)
+  - [**SecondaryButton**](#secondarybutton)
+  - [**IconButton**](#iconbutton)
+  - [**FloatingActionButton**](#floatingactionbutton)
+- [🃏 Card Components](#-card-components)
+  - [**Card**](#card)
+  - [**ProfileCard**](#profilecard)
+  - [**InfoCard**](#infocard)
+- [📝 Input Components](#-input-components)
+  - [**CustomTextField**](#customtextfield)
+  - [**CustomToggle**](#customtoggle)
+  - [**CustomSlider**](#customslider)
+  - [**CustomPicker**](#custompicker)
+- [🧭 Navigation Components](#-navigation-components)
+  - [**CustomNavigationBar**](#customnavigationbar)
+  - [**CustomTabBar**](#customtabbar)
+- [📐 Layout Components](#-layout-components)
+  - [**CustomStack**](#customstack)
+  - [**CustomGrid**](#customgrid)
+  - [**CustomLazyGrid**](#customlazygrid)
+- [💬 Feedback Components](#-feedback-components)
+  - [**CustomAlert**](#customalert)
+  - [**CustomToast**](#customtoast)
+  - [**CustomProgressView**](#customprogressview)
+- [🛠️ Utility Components](#-utility-components)
+  - [**CustomDivider**](#customdivider)
+  - [**CustomSpacer**](#customspacer)
+  - [**CustomDivider**](#customdivider)
+- [🎨 Styling](#-styling)
+  - [**ButtonStyle**](#buttonstyle)
+  - [**ViewModifier**](#viewmodifier)
+- [📚 Next Steps](#-next-steps)
+- [🤝 Support](#-support)
+<!-- TOC END -->
+
+
 Complete API documentation for iOS UI Components.
 
 ## 📋 Table of Contents

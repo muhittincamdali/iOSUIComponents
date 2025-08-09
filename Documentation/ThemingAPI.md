@@ -1,5 +1,45 @@
 # Theming API
 
+<!-- TOC START -->
+## Table of Contents
+- [Theming API](#theming-api)
+- [Overview](#overview)
+- [Core Components](#core-components)
+  - [ThemeManager](#thememanager)
+  - [Theme](#theme)
+  - [ThemeColors](#themecolors)
+- [Usage Examples](#usage-examples)
+  - [Basic Theme Application](#basic-theme-application)
+  - [Dark Mode Support](#dark-mode-support)
+  - [Custom Theme Creation](#custom-theme-creation)
+- [Dynamic Theme Switching](#dynamic-theme-switching)
+  - [Runtime Theme Changes](#runtime-theme-changes)
+  - [Theme Configuration](#theme-configuration)
+- [SwiftUI Support](#swiftui-support)
+  - [SwiftUI Theme Integration](#swiftui-theme-integration)
+  - [SwiftUI Usage](#swiftui-usage)
+- [Accessibility Support](#accessibility-support)
+  - [High Contrast Support](#high-contrast-support)
+  - [Dynamic Type Support](#dynamic-type-support)
+- [Error Handling](#error-handling)
+  - [Theme Errors](#theme-errors)
+- [Performance Considerations](#performance-considerations)
+  - [Theme Caching](#theme-caching)
+  - [Memory Management](#memory-management)
+- [Best Practices](#best-practices)
+  - [Theme Design](#theme-design)
+  - [Code Organization](#code-organization)
+- [Migration Guide](#migration-guide)
+  - [From Manual Styling](#from-manual-styling)
+  - [From Hardcoded Colors](#from-hardcoded-colors)
+- [Version History](#version-history)
+  - [Version 1.0.0](#version-100)
+  - [Version 1.1.0](#version-110)
+  - [Version 1.2.0](#version-120)
+- [Support](#support)
+<!-- TOC END -->
+
+
 ## Overview
 
 The Theming API provides comprehensive theming and design system management for iOS UI Components. This API supports dynamic themes, dark mode, custom color schemes, typography scaling, and accessibility features.

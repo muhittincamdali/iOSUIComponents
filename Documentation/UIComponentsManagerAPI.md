@@ -1,5 +1,45 @@
 # UI Components Manager API
 
+<!-- TOC START -->
+## Table of Contents
+- [UI Components Manager API](#ui-components-manager-api)
+- [Overview](#overview)
+- [Core Components](#core-components)
+  - [UIComponentsManager](#uicomponentsmanager)
+  - [UIComponentsConfiguration](#uicomponentsconfiguration)
+- [Usage Examples](#usage-examples)
+  - [Basic Manager Setup](#basic-manager-setup)
+  - [Advanced Configuration](#advanced-configuration)
+  - [Component Registration](#component-registration)
+  - [Runtime Configuration Updates](#runtime-configuration-updates)
+- [Lifecycle Management](#lifecycle-management)
+  - [Manager Lifecycle](#manager-lifecycle)
+  - [Component Lifecycle](#component-lifecycle)
+- [Performance Management](#performance-management)
+  - [Caching Configuration](#caching-configuration)
+  - [Memory Management](#memory-management)
+- [SwiftUI Support](#swiftui-support)
+  - [SwiftUI Manager Integration](#swiftui-manager-integration)
+  - [SwiftUI Usage](#swiftui-usage)
+- [Error Handling](#error-handling)
+  - [Manager Errors](#manager-errors)
+- [Debugging and Monitoring](#debugging-and-monitoring)
+  - [Debug Configuration](#debug-configuration)
+  - [Performance Monitoring](#performance-monitoring)
+- [Best Practices](#best-practices)
+  - [Manager Usage](#manager-usage)
+  - [Component Management](#component-management)
+- [Migration Guide](#migration-guide)
+  - [From Manual Component Management](#from-manual-component-management)
+  - [From Direct Configuration](#from-direct-configuration)
+- [Version History](#version-history)
+  - [Version 1.0.0](#version-100)
+  - [Version 1.1.0](#version-110)
+  - [Version 1.2.0](#version-120)
+- [Support](#support)
+<!-- TOC END -->
+
+
 ## Overview
 
 The UI Components Manager API provides centralized management for all UI components in the iOS UI Components library. This API handles component lifecycle, configuration, theming, and performance optimization.

@@ -1,5 +1,57 @@
 # Theming Guide
 
+<!-- TOC START -->
+## Table of Contents
+- [Theming Guide](#theming-guide)
+- [Overview](#overview)
+- [Getting Started](#getting-started)
+  - [Basic Theme Application](#basic-theme-application)
+  - [Theme Configuration](#theme-configuration)
+- [Theme Types](#theme-types)
+  - [Light Theme](#light-theme)
+  - [Dark Theme](#dark-theme)
+  - [Custom Theme](#custom-theme)
+- [Dynamic Theme Switching](#dynamic-theme-switching)
+  - [Runtime Theme Changes](#runtime-theme-changes)
+  - [Automatic Theme Switching](#automatic-theme-switching)
+- [Color Schemes](#color-schemes)
+  - [Primary Color Scheme](#primary-color-scheme)
+  - [Semantic Color Scheme](#semantic-color-scheme)
+  - [Custom Color Scheme](#custom-color-scheme)
+- [Typography](#typography)
+  - [Font Scales](#font-scales)
+  - [Dynamic Type Support](#dynamic-type-support)
+- [Spacing System](#spacing-system)
+  - [Standard Spacing](#standard-spacing)
+  - [Custom Spacing](#custom-spacing)
+- [Animation Theming](#animation-theming)
+  - [Animation Scales](#animation-scales)
+- [SwiftUI Support](#swiftui-support)
+  - [SwiftUI Theme Integration](#swiftui-theme-integration)
+  - [SwiftUI Usage](#swiftui-usage)
+- [Accessibility Support](#accessibility-support)
+  - [High Contrast Support](#high-contrast-support)
+  - [Reduced Motion Support](#reduced-motion-support)
+- [Best Practices](#best-practices)
+  - [Theme Design](#theme-design)
+  - [Color Usage](#color-usage)
+  - [Typography Usage](#typography-usage)
+- [Common Patterns](#common-patterns)
+  - [Brand Theme](#brand-theme)
+  - [Seasonal Theme](#seasonal-theme)
+  - [Accessibility Theme](#accessibility-theme)
+- [Error Handling](#error-handling)
+  - [Theme Errors](#theme-errors)
+- [Performance Considerations](#performance-considerations)
+  - [Theme Caching](#theme-caching)
+  - [Memory Management](#memory-management)
+- [Migration Guide](#migration-guide)
+  - [From Manual Styling](#from-manual-styling)
+  - [From Hardcoded Colors](#from-hardcoded-colors)
+- [Support](#support)
+<!-- TOC END -->
+
+
 ## Overview
 
 The Theming Guide provides comprehensive information about using theming and design system features in iOS UI Components. This guide covers theme creation, customization, dark mode support, and best practices.

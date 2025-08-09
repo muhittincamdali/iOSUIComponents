@@ -1,5 +1,33 @@
 # 📱 Component Guide
 
+<!-- TOC START -->
+## Table of Contents
+- [📱 Component Guide](#-component-guide)
+- [📋 Table of Contents](#-table-of-contents)
+- [🧭 Navigation Components](#-navigation-components)
+  - [**Custom Tab Bar**](#custom-tab-bar)
+  - [**Custom Navigation Bar**](#custom-navigation-bar)
+- [⌨️ Input Components](#-input-components)
+  - [**Custom Text Field**](#custom-text-field)
+  - [**Custom Toggle**](#custom-toggle)
+  - [**Custom Slider**](#custom-slider)
+- [📊 Display Components](#-display-components)
+  - [**Custom Card**](#custom-card)
+  - [**Custom Badge**](#custom-badge)
+- [🔄 Feedback Components](#-feedback-components)
+  - [**Loading Spinner**](#loading-spinner)
+  - [**Toast Message**](#toast-message)
+- [📱 Media Components](#-media-components)
+  - [**Image Carousel**](#image-carousel)
+  - [**Custom Avatar**](#custom-avatar)
+- [🎨 Customization](#-customization)
+  - [**Theme Support**](#theme-support)
+  - [**Animation Support**](#animation-support)
+- [📚 Next Steps](#-next-steps)
+- [🤝 Support](#-support)
+<!-- TOC END -->
+
+
 Complete guide for using iOS UI Components.
 
 ## 📋 Table of Contents

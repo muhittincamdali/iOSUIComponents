@@ -1,5 +1,35 @@
 # 🚀 Getting Started with iOS UI Components
 
+<!-- TOC START -->
+## Table of Contents
+- [🚀 Getting Started with iOS UI Components](#-getting-started-with-ios-ui-components)
+- [📋 Table of Contents](#-table-of-contents)
+- [📦 Installation](#-installation)
+  - [**Prerequisites**](#prerequisites)
+  - [**Swift Package Manager**](#swift-package-manager)
+  - [**CocoaPods**](#cocoapods)
+- [🎯 Basic Usage](#-basic-usage)
+  - [**Import Framework**](#import-framework)
+  - [**Custom Button**](#custom-button)
+  - [**Custom Card**](#custom-card)
+  - [**Custom Text Field**](#custom-text-field)
+- [🎨 Customization](#-customization)
+  - [**Theme Configuration**](#theme-configuration)
+  - [**Component Styling**](#component-styling)
+- [📱 Component Examples](#-component-examples)
+  - [**Navigation Components**](#navigation-components)
+  - [**Input Components**](#input-components)
+  - [**Display Components**](#display-components)
+- [🔧 Troubleshooting](#-troubleshooting)
+  - [**Common Issues**](#common-issues)
+    - [**Component Not Rendering**](#component-not-rendering)
+    - [**Styling Issues**](#styling-issues)
+    - [**Performance Issues**](#performance-issues)
+- [📚 Next Steps](#-next-steps)
+- [🤝 Support](#-support)
+<!-- TOC END -->
+
+
 Quick start guide for using iOS UI Component Library.
 
 ## 📋 Table of Contents

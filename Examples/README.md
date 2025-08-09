@@ -1,5 +1,42 @@
 # Examples
 
+<!-- TOC START -->
+## Table of Contents
+- [Examples](#examples)
+- [📁 Directory Structure](#-directory-structure)
+- [🚀 Getting Started](#-getting-started)
+  - [Basic Examples](#basic-examples)
+  - [Running Examples](#running-examples)
+- [📱 Example Categories](#-example-categories)
+  - [Button Examples](#button-examples)
+  - [Text Field Examples](#text-field-examples)
+  - [Card Examples](#card-examples)
+  - [Navigation Examples](#navigation-examples)
+  - [Form Examples](#form-examples)
+  - [Theming Examples](#theming-examples)
+- [🎨 Customization Examples](#-customization-examples)
+  - [Custom Button Styles](#custom-button-styles)
+  - [Custom Card Layouts](#custom-card-layouts)
+- [♿ Accessibility Examples](#-accessibility-examples)
+  - [VoiceOver Support](#voiceover-support)
+  - [Dynamic Type Support](#dynamic-type-support)
+- [🔧 Configuration Examples](#-configuration-examples)
+  - [Component Configuration](#component-configuration)
+  - [Theme Configuration](#theme-configuration)
+- [📱 SwiftUI Examples](#-swiftui-examples)
+  - [SwiftUI Button](#swiftui-button)
+  - [SwiftUI Text Field](#swiftui-text-field)
+  - [SwiftUI Card](#swiftui-card)
+- [🧪 Testing Examples](#-testing-examples)
+  - [Unit Tests](#unit-tests)
+  - [Integration Tests](#integration-tests)
+- [📚 Documentation](#-documentation)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
+- [🙏 Acknowledgments](#-acknowledgments)
+<!-- TOC END -->
+
+
 This directory contains comprehensive examples demonstrating how to use iOS UI Components in your applications.
 
 ## 📁 Directory Structure

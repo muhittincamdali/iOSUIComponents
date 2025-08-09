@@ -1,5 +1,47 @@
 # Button Components API
 
+<!-- TOC START -->
+## Table of Contents
+- [Button Components API](#button-components-api)
+- [Overview](#overview)
+- [Core Components](#core-components)
+  - [CustomButton](#custombutton)
+  - [ButtonStyle](#buttonstyle)
+  - [ButtonSize](#buttonsize)
+- [Configuration](#configuration)
+  - [ButtonConfiguration](#buttonconfiguration)
+- [Usage Examples](#usage-examples)
+  - [Basic Button Creation](#basic-button-creation)
+  - [Advanced Button with Loading State](#advanced-button-with-loading-state)
+  - [Custom Styled Button](#custom-styled-button)
+- [Accessibility](#accessibility)
+  - [VoiceOver Support](#voiceover-support)
+  - [Dynamic Type Support](#dynamic-type-support)
+- [Animation](#animation)
+  - [Built-in Animations](#built-in-animations)
+  - [Custom Animations](#custom-animations)
+- [SwiftUI Support](#swiftui-support)
+  - [SwiftUI Button Component](#swiftui-button-component)
+  - [SwiftUI Usage](#swiftui-usage)
+- [Error Handling](#error-handling)
+  - [Button Errors](#button-errors)
+- [Performance Considerations](#performance-considerations)
+  - [Memory Management](#memory-management)
+  - [Rendering Performance](#rendering-performance)
+- [Best Practices](#best-practices)
+  - [Button Design](#button-design)
+  - [Code Organization](#code-organization)
+- [Migration Guide](#migration-guide)
+  - [From UIKit Buttons](#from-uikit-buttons)
+  - [From SwiftUI Buttons](#from-swiftui-buttons)
+- [Version History](#version-history)
+  - [Version 1.0.0](#version-100)
+  - [Version 1.1.0](#version-110)
+  - [Version 1.2.0](#version-120)
+- [Support](#support)
+<!-- TOC END -->
+
+
 ## Overview
 
 The Button Components API provides a comprehensive set of customizable button components for iOS applications. This API supports both SwiftUI and UIKit, offering enterprise-grade button solutions with advanced customization options, accessibility features, and smooth animations.

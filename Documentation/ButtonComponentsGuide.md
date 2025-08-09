@@ -1,5 +1,55 @@
 # Button Components Guide
 
+<!-- TOC START -->
+## Table of Contents
+- [Button Components Guide](#button-components-guide)
+- [Overview](#overview)
+- [Getting Started](#getting-started)
+  - [Basic Button Creation](#basic-button-creation)
+  - [Button Configuration](#button-configuration)
+- [Button Styles](#button-styles)
+  - [Primary Button](#primary-button)
+  - [Secondary Button](#secondary-button)
+  - [Outline Button](#outline-button)
+  - [Danger Button](#danger-button)
+- [Button Sizes](#button-sizes)
+  - [Small Button](#small-button)
+  - [Medium Button](#medium-button)
+  - [Large Button](#large-button)
+- [Button Interactions](#button-interactions)
+  - [Tap Action](#tap-action)
+  - [Long Press Action](#long-press-action)
+  - [State Changes](#state-changes)
+- [Button Animations](#button-animations)
+  - [Tap Animation](#tap-animation)
+  - [Loading Animation](#loading-animation)
+  - [Success Animation](#success-animation)
+- [Button Accessibility](#button-accessibility)
+  - [VoiceOver Support](#voiceover-support)
+  - [Dynamic Type Support](#dynamic-type-support)
+  - [High Contrast Support](#high-contrast-support)
+- [SwiftUI Support](#swiftui-support)
+  - [SwiftUI Button](#swiftui-button)
+  - [SwiftUI Usage](#swiftui-usage)
+- [Best Practices](#best-practices)
+  - [Button Design](#button-design)
+  - [Button States](#button-states)
+  - [Button Interactions](#button-interactions)
+- [Common Patterns](#common-patterns)
+  - [Form Submission Button](#form-submission-button)
+  - [Navigation Button](#navigation-button)
+  - [Action Button](#action-button)
+- [Error Handling](#error-handling)
+  - [Button Errors](#button-errors)
+- [Performance Considerations](#performance-considerations)
+  - [Button Performance](#button-performance)
+- [Migration Guide](#migration-guide)
+  - [From UIButton](#from-uibutton)
+  - [From SwiftUI Button](#from-swiftui-button)
+- [Support](#support)
+<!-- TOC END -->
+
+
 ## Overview
 
 The Button Components Guide provides comprehensive information about using button components in iOS UI Components. This guide covers button creation, styling, interactions, accessibility, and best practices.

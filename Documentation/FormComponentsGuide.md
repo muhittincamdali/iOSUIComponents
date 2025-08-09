@@ -1,5 +1,57 @@
 # Form Components Guide
 
+<!-- TOC START -->
+## Table of Contents
+- [Form Components Guide](#form-components-guide)
+- [Overview](#overview)
+- [Getting Started](#getting-started)
+  - [Basic Form Creation](#basic-form-creation)
+  - [Form Configuration](#form-configuration)
+- [Form Field Types](#form-field-types)
+  - [Text Fields](#text-fields)
+  - [Number Fields](#number-fields)
+  - [Selection Fields](#selection-fields)
+- [Form Validation](#form-validation)
+  - [Required Field Validation](#required-field-validation)
+  - [Pattern Validation](#pattern-validation)
+  - [Custom Validation](#custom-validation)
+- [Form Interactions](#form-interactions)
+  - [Field Change Handling](#field-change-handling)
+  - [Form Submission](#form-submission)
+  - [Auto Save](#auto-save)
+- [Advanced Form Features](#advanced-form-features)
+  - [Conditional Fields](#conditional-fields)
+  - [Multi-Step Forms](#multi-step-forms)
+  - [Field Grouping](#field-grouping)
+- [Form Styling](#form-styling)
+  - [Basic Styling](#basic-styling)
+  - [Custom Styling](#custom-styling)
+- [Form Accessibility](#form-accessibility)
+  - [VoiceOver Support](#voiceover-support)
+  - [Dynamic Type Support](#dynamic-type-support)
+  - [High Contrast Support](#high-contrast-support)
+- [SwiftUI Support](#swiftui-support)
+  - [SwiftUI Form](#swiftui-form)
+  - [SwiftUI Usage](#swiftui-usage)
+- [Best Practices](#best-practices)
+  - [Form Design](#form-design)
+  - [Form Validation](#form-validation)
+  - [Form Interactions](#form-interactions)
+- [Common Patterns](#common-patterns)
+  - [Registration Form](#registration-form)
+  - [Contact Form](#contact-form)
+  - [Settings Form](#settings-form)
+- [Error Handling](#error-handling)
+  - [Form Errors](#form-errors)
+- [Performance Considerations](#performance-considerations)
+  - [Form Performance](#form-performance)
+- [Migration Guide](#migration-guide)
+  - [From UIKit Forms](#from-uikit-forms)
+  - [From SwiftUI Forms](#from-swiftui-forms)
+- [Support](#support)
+<!-- TOC END -->
+
+
 ## Overview
 
 The Form Components Guide provides comprehensive information about using form components in iOS UI Components. This guide covers form creation, validation, styling, accessibility, and best practices.

@@ -41,6 +41,12 @@
 
 ---
 
+## 🌟 Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=muhittincamdali/iOSUIComponents&type=Date)](https://star-history.com/#muhittincamdali/iOSUIComponents&Date)
+
+---
+
 ## 📋 Table of Contents
 
 - [🚀 Overview](#-overview)

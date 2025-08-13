@@ -1,0 +1,17 @@
+warning: 'iosuicomponents': dependency 'kingfisher' is not used by any target
+[0/1] Planning build
+[1/1] Compiling plugin SwiftLintCommandPlugin
+[2/2] Compiling plugin SwiftLintBuildToolPlugin
+[3/3] Compiling plugin GenerateManual
+[4/4] Compiling plugin GenerateDoccReference
+Building for debugging...
+[4/5] Write swift-version--58304C5D6DBC2206.txt
+[6/7] Emitting module ModalComponents
+[7/7] Compiling ModalComponents ModalComponents.swift
+/Users/muhittincamdali/Desktop/Cursor Projects/GitHub/iOSUIComponents/Sources/ModalComponents/ModalComponents.swift:171:32: error: the compiler is unable to type-check this expression in reasonable time; try breaking up the expression into distinct sub-expressions
+169 |     }
+170 |     
+171 |     public var body: some View {
+    |                                `- error: the compiler is unable to type-check this expression in reasonable time; try breaking up the expression into distinct sub-expressions
+172 |         ZStack {
+173 |             Color.black.opacity(0.5)

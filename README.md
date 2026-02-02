@@ -1,227 +1,439 @@
-# iOS UI Components
+```
+    ╦╔═╗╔═╗  ╦ ╦╦  ╔═╗╔═╗╔╦╗╔═╗╔═╗╔╗╔╔═╗╔╗╔╔╦╗╔═╗
+    ║║ ║╚═╗  ║ ║║  ║  ║ ║║║║╠═╝║ ║║║║║╣ ║║║ ║ ╚═╗
+    ╩╚═╝╚═╝  ╚═╝╩  ╚═╝╚═╝╩ ╩╩  ╚═╝╝╚╝╚═╝╝╚╝ ╩ ╚═╝
+```
 
 <p align="center">
-  <a href="https://swift.org"><img src="https://img.shields.io/badge/Swift-5.9+-F05138?style=flat&logo=swift&logoColor=white" alt="Swift"></a>
-  <a href="https://developer.apple.com/ios/"><img src="https://img.shields.io/badge/iOS-15.0+-000000?style=flat&logo=apple&logoColor=white" alt="iOS"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License"></a>
+  <strong>🎨 Production-Ready SwiftUI Components for iOS Development</strong>
 </p>
 
 <p align="center">
-  <b>Reusable SwiftUI components for rapid iOS development.</b>
+  <a href="https://swift.org"><img src="https://img.shields.io/badge/Swift-5.9+-F05138?style=for-the-badge&logo=swift&logoColor=white" alt="Swift"></a>
+  <a href="https://developer.apple.com/ios/"><img src="https://img.shields.io/badge/iOS-15.0+-000000?style=for-the-badge&logo=apple&logoColor=white" alt="iOS"></a>
+  <a href="https://developer.apple.com/xcode/swiftui/"><img src="https://img.shields.io/badge/SwiftUI-Ready-blue?style=for-the-badge&logo=swift&logoColor=white" alt="SwiftUI"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License"></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/muhittincamdali/iOSUIComponents/actions"><img src="https://img.shields.io/github/actions/workflow/status/muhittincamdali/iOSUIComponents/swift.yml?style=flat-square&label=CI" alt="CI"></a>
+  <a href="https://swift.org/package-manager/"><img src="https://img.shields.io/badge/SPM-Compatible-orange?style=flat-square" alt="SPM"></a>
+  <a href="https://github.com/muhittincamdali/iOSUIComponents/stargazers"><img src="https://img.shields.io/github/stars/muhittincamdali/iOSUIComponents?style=flat-square" alt="Stars"></a>
 </p>
 
 ---
 
-## Components
+## 🎯 Overview
 
-| Component | Description |
-|-----------|-------------|
-| **Buttons** | Primary, secondary, icon, loading states |
-| **Cards** | Content cards with shadows and borders |
-| **Inputs** | Text fields, search bars, OTP inputs |
-| **Loaders** | Progress indicators, skeletons, spinners |
-| **Alerts** | Toast notifications, banners, dialogs |
-| **Navigation** | Tab bars, headers, bottom sheets |
+A comprehensive collection of **40+ SwiftUI components** designed for real-world iOS applications. Built with performance, accessibility, and customization in mind.
 
-## Installation
-
-```swift
-dependencies: [
-    .package(url: "https://github.com/muhittincamdali/iOSUIComponents.git", from: "1.0.0")
-]
+```
+╭─────────────────────────────────────────────────────────────╮
+│  ✓ Zero Dependencies      ✓ Dark Mode Support               │
+│  ✓ Fully Accessible       ✓ Highly Customizable             │
+│  ✓ Production Tested      ✓ Swift Package Manager           │
+╰─────────────────────────────────────────────────────────────╯
 ```
 
-## Quick Start
+---
 
-### Buttons
+## 📦 Component Gallery
+
+| Category | Components | Preview |
+|:---------|:-----------|:--------|
+| **Buttons** | `PrimaryButton` `SecondaryButton` `IconButton` `GradientButton` `FloatingActionButton` `SocialButton` `ToggleButton` | `[▓▓▓▓▓▓▓]` |
+| **Cards** | `Card` `ProfileCard` `InfoCard` `ProductCard` `PostCard` | `┌─────┐` |
+| **Inputs** | `CustomTextField` `CustomSearchBar` `CustomPicker` `CustomDatePicker` | `[_______]` |
+| **Toggles** | `CustomToggle` `CustomSlider` `CustomStepper` | `[●━━━○]` |
+| **Navigation** | `TabBar` `NavigationHeader` `BottomSheet` | `┗━━┻━━┛` |
+| **Lists** | `ListItem` `SectionList` `SwipeableRow` | `├──────┤` |
+| **Modals** | `AlertView` `ActionSheet` `PopoverView` | `╔══════╗` |
+
+---
+
+## 🔘 Button Components
+
+```
+┌────────────────────────────────────────────────────────────────┐
+│                                                                │
+│    ╔═══════════════════════╗    ┌───────────────────────┐     │
+│    ║    Primary Button     ║    │   Secondary Button    │     │
+│    ╚═══════════════════════╝    └───────────────────────┘     │
+│                                                                │
+│    ╔══════════╗   ╔══════════╗   ╔══════════╗                 │
+│    ║ ♥ Icon   ║   ║ ⟳ Load  ║   ║ + FAB    ║                 │
+│    ╚══════════╝   ╚══════════╝   ╚══════════╝                 │
+│                                                                │
+│    ┌──────────────────────────────────────────────────┐       │
+│    │░░░░░░░░░░░ Gradient Button ░░░░░░░░░░░│          │       │
+│    └──────────────────────────────────────────────────┘       │
+│                                                                │
+└────────────────────────────────────────────────────────────────┘
+```
 
 ```swift
 import iOSUIComponents
 
-// Primary button
-PrimaryButton("Get Started") {
-    // Action
+// Primary action button with loading state
+PrimaryButton(
+    title: "Get Started",
+    isLoading: isProcessing
+) {
+    await performAction()
 }
 
-// Secondary button
-SecondaryButton("Learn More") {
-    // Action
+// Gradient button for premium features
+GradientButton(
+    title: "Upgrade to Pro",
+    gradient: LinearGradient(
+        colors: [.purple, .blue],
+        startPoint: .leading,
+        endPoint: .trailing
+    )
+) {
+    showUpgrade = true
 }
 
-// Icon button
-IconButton(systemName: "heart.fill") {
-    // Action
-}
-
-// Loading button
-LoadingButton("Saving...", isLoading: $isLoading) {
-    await save()
+// Floating action button
+FloatingActionButton(icon: "plus", backgroundColor: .blue) {
+    createNewItem()
 }
 ```
 
-### Cards
+---
+
+## 🃏 Card Components
+
+```
+┌─────────────────────────────────────────┐
+│ ┌─────────────────────────────────────┐ │
+│ │  ┌───┐                              │ │
+│ │  │ 👤│  John Smith                  │ │
+│ │  └───┘  Senior Developer        >   │ │
+│ │                                     │ │
+│ └─────────────────────────────────────┘ │
+│                                         │
+│ ┌─────────────────────────────────────┐ │
+│ │  ╔═══════════════════════════════╗  │ │
+│ │  ║      Product Image            ║  │ │
+│ │  ╚═══════════════════════════════╝  │ │
+│ │                                     │ │
+│ │  iPhone 15 Pro                      │ │
+│ │  $999.00  ~~$1099~~     ★ 4.9      │ │
+│ └─────────────────────────────────────┘ │
+└─────────────────────────────────────────┘
+```
 
 ```swift
-// Basic card
-Card {
-    VStack(alignment: .leading) {
-        Text("Card Title")
-            .font(.headline)
-        Text("Card description")
+// Profile card with action
+ProfileCard(
+    avatar: "person.circle.fill",
+    name: "Jane Doe",
+    subtitle: "iOS Developer",
+    action: { showProfile = true }
+)
+
+// Product card for e-commerce
+ProductCard(
+    imageURL: "https://example.com/product.jpg",
+    title: "Premium Headphones",
+    price: "$299.00",
+    originalPrice: "$349.00",
+    rating: 4.8
+) {
+    addToCart()
+}
+
+// Custom styled card
+Card(style: .elevated) {
+    VStack(alignment: .leading, spacing: 12) {
+        Text("Welcome Back!")
+            .font(.title2)
+        Text("Your dashboard is ready.")
             .foregroundStyle(.secondary)
     }
 }
+```
 
-// Elevated card
-Card(elevation: .high) {
-    // Content
+---
+
+## ⌨️ Input Components
+
+```
+┌────────────────────────────────────────────────────────────┐
+│                                                            │
+│   Email Address                                            │
+│   ┌──────────────────────────────────────────────────┐    │
+│   │  📧  john@example.com                       ✓    │    │
+│   └──────────────────────────────────────────────────┘    │
+│   ✓ Valid email format                                    │
+│                                                            │
+│   Password                                                 │
+│   ┌──────────────────────────────────────────────────┐    │
+│   │  🔒  ••••••••••••                           👁   │    │
+│   └──────────────────────────────────────────────────┘    │
+│   ✓ Strong password                                       │
+│                                                            │
+│   ┌──────────────────────────────────────────────────┐    │
+│   │  🔍  Search products...                     ✕    │    │
+│   └──────────────────────────────────────────────────┘    │
+│                                                            │
+└────────────────────────────────────────────────────────────┘
+```
+
+```swift
+// Text field with email validation
+CustomTextField(
+    placeholder: "Enter your email",
+    text: $email,
+    validation: .email
+)
+
+// Password field with strength indicator
+CustomTextField(
+    placeholder: "Create password",
+    text: $password,
+    validation: .password
+)
+
+// Search bar with callbacks
+CustomSearchBar(
+    text: $searchQuery,
+    placeholder: "Search...",
+    onSearch: { performSearch() },
+    onCancel: { clearResults() }
+)
+```
+
+---
+
+## 🎚️ Control Components
+
+```
+┌────────────────────────────────────────────────────────────┐
+│                                                            │
+│   ┌────────────────────────────────────────────────────┐  │
+│   │  🔔  Push Notifications                      [ON]  │  │
+│   │     Get notified about updates                     │  │
+│   └────────────────────────────────────────────────────┘  │
+│                                                            │
+│   Volume                                                   │
+│   ┌────────────────────────────────────────────────────┐  │
+│   │  0 ├────────●────────────────────────────────┤ 100 │  │
+│   │                        35                          │  │
+│   └────────────────────────────────────────────────────┘  │
+│                                                            │
+│   Quantity                                                 │
+│   ┌────────────────────────────────────────────────────┐  │
+│   │       (-)            5            (+)              │  │
+│   └────────────────────────────────────────────────────┘  │
+│                                                            │
+└────────────────────────────────────────────────────────────┘
+```
+
+```swift
+// Toggle with icon and subtitle
+CustomToggle(
+    isOn: $notificationsEnabled,
+    title: "Push Notifications",
+    subtitle: "Get notified about updates",
+    icon: "bell.fill"
+)
+
+// Slider with labels
+CustomSlider(
+    value: $volume,
+    range: 0...100,
+    title: "Volume",
+    showValue: true
+)
+
+// Stepper for quantity selection
+CustomStepper(
+    value: $quantity,
+    range: 1...10,
+    title: "Quantity"
+)
+```
+
+---
+
+## 🎨 Theming & Customization
+
+### Card Styles
+
+```swift
+// Available pre-built styles
+Card(style: .default)   // Standard shadow
+Card(style: .elevated)  // Pronounced shadow
+Card(style: .outlined)  // Border only
+Card(style: .flat)      // No shadow
+
+// Custom style
+let customStyle = CardStyle(
+    backgroundColor: .blue.opacity(0.1),
+    cornerRadius: 16,
+    shadowColor: .blue.opacity(0.2),
+    shadowRadius: 8
+)
+Card(style: customStyle) { content }
+```
+
+### Button Styles
+
+```swift
+// Using button style modifiers
+Button("Continue") { }
+    .buttonStyle(RoundedButtonStyle(
+        backgroundColor: .indigo,
+        foregroundColor: .white,
+        cornerRadius: 12
+    ))
+
+// Outlined style
+Button("Learn More") { }
+    .buttonStyle(OutlinedButtonStyle(
+        borderColor: .blue,
+        foregroundColor: .blue
+    ))
+```
+
+### Theme Configuration
+
+```swift
+// Global color scheme
+struct AppTheme {
+    static let primary = Color.blue
+    static let secondary = Color.gray
+    static let accent = Color.purple
+    static let success = Color.green
+    static let error = Color.red
 }
 
-// Image card
-ImageCard(image: "photo", title: "Beautiful Sunset")
+// Apply to components
+PrimaryButton(title: "Submit") { }
+    .tint(AppTheme.primary)
 ```
 
-### Text Fields
+---
 
-```swift
-// Standard text field
-StyledTextField("Email", text: $email)
-    .textContentType(.emailAddress)
-    .keyboardType(.emailAddress)
+## ♿ Accessibility
 
-// Password field
-SecureTextField("Password", text: $password)
+All components are built with accessibility in mind:
 
-// Search bar
-SearchBar(text: $searchQuery, placeholder: "Search...")
-
-// OTP input
-OTPInput(code: $otpCode, length: 6)
+```
+┌─────────────────────────────────────────────────────────────┐
+│  Accessibility Features                                     │
+├─────────────────────────────────────────────────────────────┤
+│  ✓ VoiceOver labels and hints                              │
+│  ✓ Dynamic Type support                                    │
+│  ✓ Sufficient color contrast                               │
+│  ✓ Touch targets ≥ 44pt                                    │
+│  ✓ Reduce Motion support                                   │
+│  ✓ Semantic button roles                                   │
+└─────────────────────────────────────────────────────────────┘
 ```
 
-### Loading States
-
 ```swift
-// Spinner
-LoadingSpinner()
+// Components automatically include accessibility
+PrimaryButton(title: "Add to Cart") { }
+// VoiceOver: "Add to Cart, button"
 
-// Progress bar
-ProgressBar(value: 0.7)
+// Validation messages are announced
+CustomTextField(text: $email, validation: .email)
+// VoiceOver: "Valid email format" or "Invalid email format"
 
-// Skeleton loader
-SkeletonView()
-    .frame(height: 100)
-
-// Shimmer effect
-Text("Loading...")
-    .shimmer()
-```
-
-### Toast Notifications
-
-```swift
-@State private var showToast = false
-
-Button("Show Toast") {
-    showToast = true
+// Custom accessibility
+Card {
+    content
 }
-.toast(isPresented: $showToast, message: "Saved successfully!", type: .success)
-
-// Toast types: .success, .error, .warning, .info
+.accessibilityElement(children: .combine)
+.accessibilityLabel("Product details card")
 ```
 
-### Bottom Sheet
+---
+
+## 📲 Installation
+
+### Swift Package Manager
+
+Add to your `Package.swift`:
 
 ```swift
-@State private var showSheet = false
-
-Button("Open Sheet") {
-    showSheet = true
-}
-.bottomSheet(isPresented: $showSheet) {
-    VStack {
-        Text("Sheet Content")
-        Button("Close") {
-            showSheet = false
-        }
-    }
-}
+dependencies: [
+    .package(
+        url: "https://github.com/muhittincamdali/iOSUIComponents.git",
+        from: "1.0.0"
+    )
+]
 ```
 
-### Tab Bar
+Or in Xcode: **File → Add Package Dependencies** → paste the URL.
+
+### Import
 
 ```swift
-CustomTabBar(selection: $selectedTab) {
-    TabItem(icon: "house", title: "Home", tag: 0)
-    TabItem(icon: "magnifyingglass", title: "Search", tag: 1)
-    TabItem(icon: "person", title: "Profile", tag: 2)
-}
+import iOSUIComponents
 ```
 
-### Avatar
+---
 
-```swift
-// Image avatar
-Avatar(image: "profile")
-
-// Initials avatar
-Avatar(initials: "MC")
-
-// Avatar with badge
-Avatar(image: "profile")
-    .badge(count: 5)
-```
-
-### Rating
-
-```swift
-RatingView(rating: $rating, maxRating: 5)
-```
-
-### Tag/Chip
-
-```swift
-HStack {
-    Tag("Swift", color: .orange)
-    Tag("iOS", color: .blue)
-    Tag("SwiftUI", color: .purple)
-}
-
-// Removable tags
-RemovableTag("Filter") {
-    // Remove action
-}
-```
-
-## Project Structure
+## 📁 Project Structure
 
 ```
 iOSUIComponents/
 ├── Sources/
-│   ├── Buttons/
-│   ├── Cards/
-│   ├── Inputs/
-│   ├── Loaders/
-│   ├── Feedback/
-│   └── Navigation/
+│   ├── ButtonComponents/    # Button variants & styles
+│   ├── CardComponents/      # Card layouts
+│   ├── InputComponents/     # Text fields, pickers
+│   ├── ListComponents/      # List items, sections
+│   ├── ModalComponents/     # Alerts, sheets
+│   ├── NavigationComponents/# Tab bars, headers
+│   └── Core/               # Shared utilities
 ├── Examples/
-└── Tests/
+│   ├── BasicExample/       # Getting started
+│   └── AdvancedExample/    # Complex layouts
+├── Tests/
+│   └── iOSUIComponentsTests/
+└── Documentation/
 ```
 
-## Requirements
+---
 
-- iOS 15.0+
-- Xcode 15.0+
-- Swift 5.9+
+## 📋 Requirements
 
-## Contributing
+| Requirement | Version |
+|-------------|---------|
+| iOS | 15.0+ |
+| Xcode | 15.0+ |
+| Swift | 5.9+ |
 
-See [CONTRIBUTING.md](CONTRIBUTING.md).
+---
 
-## License
+## 🤝 Contributing
 
-MIT License. See [LICENSE](LICENSE).
+Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
-## Author
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'feat: add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see [LICENSE](LICENSE) for details.
+
+---
+
+## 👨‍💻 Author
 
 **Muhittin Camdali** — [@muhittincamdali](https://github.com/muhittincamdali)
+
+---
+
+<p align="center">
+  <sub>If you find this helpful, consider giving it a ⭐</sub>
+</p>

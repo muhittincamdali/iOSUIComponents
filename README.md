@@ -463,3 +463,15 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) for deta
 <p align="center">
   <sub>If you find this helpful, consider giving it a ⭐</sub>
 </p>
+
+---
+
+## 📈 Star History
+
+<a href="https://star-history.com/#muhittincamdali/iOSUIComponents&Date">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=muhittincamdali/iOSUIComponents&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=muhittincamdali/iOSUIComponents&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=muhittincamdali/iOSUIComponents&type=Date" />
+ </picture>
+</a>

@@ -23,6 +23,21 @@
 
 ---
 
+## 📋 Table of Contents
+
+- [Overview](#-overview)
+- [Component Gallery](#-component-gallery)
+- [Installation](#installation)
+- [Quick Start](#quick-start)
+- [Components](#components)
+- [Customization](#customization)
+- [Documentation](#documentation)
+- [Contributing](#contributing)
+- [License](#license)
+- [Star History](#-star-history)
+
+---
+
 ## 🎯 Overview
 
 A comprehensive collection of **40+ SwiftUI components** designed for real-world iOS applications. Built with performance, accessibility, and customization in mind.

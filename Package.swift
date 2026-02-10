@@ -35,7 +35,7 @@ let package = Package(
             targets: ["ModalComponents"])
     ],
     dependencies: [
-        .package(url: "https://github.com/onevcat/Kingfisher.git", from: "7.9.1"),
+        .package(url: "https://github.com/onevcat/Kingfisher.git", from: "8.6.2"),
         .package(url: "https://github.com/realm/SwiftLint.git", from: "0.54.0")
     ],
     targets: [

@@ -1,6 +1,7 @@
 import SwiftUI
 
 // MARK: - iOS UI Components
+@MainActor
 public struct iOSUIComponents {
     
     // MARK: - Version
@@ -13,6 +14,7 @@ public struct iOSUIComponents {
 }
 
 // MARK: - Design System
+@MainActor
 public struct DesignSystem {
     
     // MARK: - Colors
@@ -129,26 +131,26 @@ public struct DesignSystem {
     }
     
     // MARK: - Shadows
-    public struct Shadows {
+    public struct Shadows: Sendable {
         // Shadow Levels
-        public static let none = Shadow(radius: 0, x: 0, y: 0, opacity: 0)
-        public static let sm = Shadow(radius: 1, x: 0, y: 1, opacity: 0.05)
-        public static let md = Shadow(radius: 4, x: 0, y: 2, opacity: 0.1)
-        public static let lg = Shadow(radius: 8, x: 0, y: 4, opacity: 0.15)
-        public static let xl = Shadow(radius: 16, x: 0, y: 8, opacity: 0.2)
-        public static let xxl = Shadow(radius: 24, x: 0, y: 12, opacity: 0.25)
+        @MainActor public static let none = Shadow(radius: 0, x: 0, y: 0, opacity: 0)
+        @MainActor public static let sm = Shadow(radius: 1, x: 0, y: 1, opacity: 0.05)
+        @MainActor public static let md = Shadow(radius: 4, x: 0, y: 2, opacity: 0.1)
+        @MainActor public static let lg = Shadow(radius: 8, x: 0, y: 4, opacity: 0.15)
+        @MainActor public static let xl = Shadow(radius: 16, x: 0, y: 8, opacity: 0.2)
+        @MainActor public static let xxl = Shadow(radius: 24, x: 0, y: 12, opacity: 0.25)
         
         // Component Shadows
-        public static let button = md
-        public static let card = lg
-        public static let modal = xl
-        public static let dropdown = md
-        public static let tooltip = sm
+        @MainActor public static let button = md
+        @MainActor public static let card = lg
+        @MainActor public static let modal = xl
+        @MainActor public static let dropdown = md
+        @MainActor public static let tooltip = sm
     }
 }
 
 // MARK: - Shadow
-public struct Shadow {
+public struct Shadow: Sendable {
     public let radius: CGFloat
     public let x: CGFloat
     public let y: CGFloat
@@ -163,7 +165,7 @@ public struct Shadow {
 }
 
 // MARK: - Theme
-public struct Theme {
+public struct Theme: Sendable {
     public let colors: ColorPalette
     public let typography: TypographyPalette
     public let spacing: SpacingPalette
@@ -176,7 +178,7 @@ public struct Theme {
 }
 
 // MARK: - Color Palette
-public protocol ColorPalette {
+public protocol ColorPalette: Sendable {
     var primary: Color { get }
     var secondary: Color { get }
     var accent: Color { get }
@@ -191,7 +193,7 @@ public protocol ColorPalette {
 }
 
 // MARK: - Typography Palette
-public protocol TypographyPalette {
+public protocol TypographyPalette: Sendable {
     var displayLarge: Font { get }
     var displayMedium: Font { get }
     var displaySmall: Font { get }
@@ -210,7 +212,7 @@ public protocol TypographyPalette {
 }
 
 // MARK: - Spacing Palette
-public protocol SpacingPalette {
+public protocol SpacingPalette: Sendable {
     var xs: CGFloat { get }
     var sm: CGFloat { get }
     var md: CGFloat { get }
@@ -221,6 +223,7 @@ public protocol SpacingPalette {
 }
 
 // MARK: - Default Themes
+@MainActor
 public extension Theme {
     static let light = Theme(
         colors: LightColorPalette(),
